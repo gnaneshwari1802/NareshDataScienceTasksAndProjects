@@ -1,0 +1,13 @@
+Today task complete
+------>Today, I worked with the IMDb dataset obtained from Kaggle and conducted data analysis using the pandas library in Python. I began by importing the dataset from a CSV file using the read_csv() function. Next, I used various pandas functions and methods to explore and analyze the data.
+------>To get a glimpse of the dataset, I used the head() and tail() functions to view the first and last few rows, respectively. The shape attribute helped me determine the dimensions of the dataset, providing the number of rows and columns. Additionally, the columns attribute allowed me to obtain a list of column names.
+------>For obtaining summary statistics of numerical columns, I utilized the describe() function. To check for missing values, I employed the isnull() function, and subsequently used dropna() to remove rows with missing values.
+
+------->I also performed calculations on the dataset, such as calculating the mean, maximum value, standard deviation, and mode of columns using functions like mean(), max(), std(), and mode(). For correlation analysis between columns, I used the corr() function, which generated a correlation matrix.
+
+----->To manipulate the dataset, I used indexing and slicing with the iloc[] function. This allowed me to access specific rows or ranges of rows and columns.
+
+------>Additionally, I integrated the matplotlib library for data visualization. By using functions such as boxplot(), I created visual representations of the data. I set labels and titles using xlabel(), ylabel(), and title(), and displayed the plots using show(). I also had the option to save the plots as image files using savefig().
+----->Lastly, I performed data transformation tasks, including merging two DataFrames using merge() based on a common column and splitting a column into multiple columns using split().
+
+---->These are some of the key operations I carried out while analyzing the IMDb dataset using pandas. It is important to adapt the code to suit the specific requirements and characteristics of your dataset. If you have any further questions or need more specific examples, please feel free to ask!
