@@ -354,38 +354,29 @@ plt.show()
 iris['Species'] = iris['Species']. astype( 'category') #iris.head()
 
 
-# In[67]:
+# In[23]:
 
 
 list1=list()
 mylabels=list()
 for gen in iris.Species.cat.categories:
-
-
-# In[68]:
-
-
-list1.append(iris[iris.Species==gen]. SepalLengthCm)mylabels.append(gen)
-
-
-# In[69]:
-
-
+    list1.append(iris[iris.Species==gen].SepalLengthCm)
+mylabels.append(gen)
 h=plt.hist(list1,bins=30,stacked=True,rwidth=1,label=mylabels)
 plt.legend()
 plt.show()
 
 
-# WithStackedHistogramwecanseethedistributionofSepalLengthofDiferentSpeciesto-gether.ThisshowsustherangeofSepanLengthforthethreediferentSpeciesofIrisFlower.
-# 32.AreaPlot: AreaPlotgivesusavisualrepresentationofVariousdimensionsofIrisfowerand theirrangeindataset.
-
-# In[71]:
+# In[26]:
 
 
 #iris['SepalLengthCm']=iris['SepalLengthCm'].astype('category')#iris.head()
 #iris.plot.area(y='SepalLengthCm',alpha=0.4,figsize=(12,6));
-iris.plot.area(y=['SepalLengthCm' ,' SepalWidthCm', ' PetalLengthCm', ' PetalWidthCm'],alpha=0.↪4,figsize=(12, 6));
+iris.plot.area(y=['SepalLengthCm' ,'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm'],alpha=0.4,figsize=(12, 6));
 
+
+# WithStackedHistogramwecanseethedistributionofSepalLengthofDiferentSpeciesto-gether.ThisshowsustherangeofSepanLengthforthethreediferentSpeciesofIrisFlower.
+# 32.AreaPlot: AreaPlotgivesusavisualrepresentationofVariousdimensionsofIrisfowerand theirrangeindataset.
 
 # 33.Distplot: Ithelpsustolookatthedistributionofasinglevariable.Kdeshowsthedensityof thedistribution
 
