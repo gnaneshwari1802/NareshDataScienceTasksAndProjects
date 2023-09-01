@@ -13,11 +13,13 @@ Created on Tue Aug 15 22:26:57 2023
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+import statsmodels.api as sm
+
 
 #********************************************************************************************************************************
 
 # Importing the dataset
-dataset = pd.read_csv(r"C:\Users\M GNANESHWARI\Desktop\14th\14th\MLR\Investment.csv")
+dataset = pd.read_csv(r"C:\Users\M GNANESHWARI\Desktop\MLR-main\MLR-main\Investment.csv")
 #This dataset contains information about 50-startups. R&D spend, amount of money spend on administration, amount of money spend on marketing,state which startup operates & profit of the organisation
 #we want o build the model to see lineare dependency b/w all these independendt variables. which feature you have to invest more to get the companys more profit
 #X- create matrix of independet variable exclude profit // y - creae a matrix of dependent variable that is ony profit
@@ -64,6 +66,7 @@ regressor.fit(X_train, y_train)
 
 # Predicting the Test set results
 y_pred = regressor.predict(X_test)
+y_pred
 #you have to create the vector of prediction is called as y_pred & these all are 10 predicted profits & also  let me open y_test which is actual observation or real profit
 #we will compare the profit of real profit is y_test & predicted profit is y_pred which build by model 
 #we almoset get accurate prediction & we can say that our model did quite good job & we build the multilinear regression model
@@ -80,7 +83,7 @@ y_pred = regressor.predict(X_test)
 
 #Building the optimal model using Backward elimination
 
-import statsmodels.formula.api as sm
+import statsmodels.formula.api as sm1
 #for statistical model we will import the stats model.formula.api & keep a shortcut name as sm
 #when you import the stats model you dont have to calculate anything & all statistical calculation done ny machine only
 #if you check our multiple linerae equation we have B0 is constant but if you check our dataset we dont have any constant hear, thats why we will add 1 as constant for everyrow
@@ -91,6 +94,7 @@ import statsmodels.formula.api as sm
 # we will use append function to add all 1s in all 50 observation
 
 X = np.append(arr = np.ones((50,1)).astype(int), values = X, axis = 1) 
+X
 #we will take only independent variable & hear X is independent variable
 #this is maths concept & you should know how to write this concept to python code
 #first argument is append withe all numpy & if you check ctrl+i then it give you hint to go next option
@@ -117,7 +121,7 @@ X = np.append(arr = np.ones((50,1)).astype(int), values = X, axis = 1)
 #next step we will check the p-value & Significance level to verify that either that INdep variable is stay in model or remove one-by-one
 #lets look for predictor with highest p-value using stats model library called summary()
 
-import statsmodels.api as sm
+
 X_opt = X[:,[0,1,2,3,4,5]]
 
 #OrdinaryLeastSquares
@@ -138,25 +142,25 @@ X_opt = X[:, [0,1,2,3,5]]
 #removed 2nd index which was X2 - 2nd index - dummy 2
 regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
 #again fit the regressor_OLS 
-regressor_OLS.summary()
+print(regressor_OLS.summary())
 #after execute you got other table as which has higest p-value is x1- dummy1, which has 1st index , removed 1 st index
 
 X_opt = X[:, [0,1,2,3]]
 #removed 1st index which has X2 - 1st index - dummy1
 regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
-regressor_OLS.summary()
+print(regressor_OLS.summary())
 #as per the new table we found higest p-value x2 > 0.05, you have to remove x2 
 #so far we removed 1st & 2nd index which is dummy variable , now we will remove 4th index cuz of highest p-value
 
 X_opt = X[:, [0,1,3]]
 regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
-regressor_OLS.summary()
+print(regressor_OLS.summary())
 #after remove everything as per the condition p-value>SL & we get the final independent variable those are const,r&d , admin
 #out of these 2 independnt variable lets look at the highest p-value whcih is marketing this is greate then 0.05 which index this has 5th indexing
 
 X_opt = X[:, [0,1]]
 regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
-regressor_OLS.summary()
+print(regressor_OLS.summary())
 #we generate final table where we have only 1 independent variable is called R&d spend 
 #this R&D spend is more impact an profit part so finaly being datascientist you have to explain that you have to spend more on R&D spend
 #this is end of the multiple linear regression
