@@ -1,1 +1,2 @@
 https://www.kaggle.com/padmait/eda-bank-loan-default-risk-analysis
+https://scipy.github.io/old-wiki/pages/Numpy_Example_List.html
