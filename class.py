@@ -37,10 +37,11 @@ x
 #imputed_data = imputer.fit_transform(data)
 from sklearn.impute import SimpleImputer # spyder
 
-imputer = SimpleImputer(missing_values=np.nan, strategy ="median")
+#imputer = SimpleImputer(missing_values=np.nan, strategy ="median")
 
 # --------------------------------------------------------------------
-
+#imputer = SimpleImputer(missing_values=np.nan, strategy ="mean")
+imputer = SimpleImputer(missing_values=np.nan, strategy ="most_frequent")
 imputer = imputer.fit(x[:,1:3])
 
 x[:, 1:3] = imputer.transform(x[:,1:3])
@@ -50,11 +51,18 @@ x
 # How to Encode Categorical data & crete a dummy variable
 #The code snippet you've provided imports the LabelEncoder class from scikit-learn's sklearn.preprocessing module. LabelEncoder is a commonly used tool for encoding categorical labels (textual or nominal data) into numerical values, which are often required for machine learning algorithms that expect numerical input.
 from sklearn.preprocessing import LabelEncoder
-
+#Encode target labels with value between 0 and n_classes-1. This transformer should be used to encode target values, i.e. y , and not the input X .
+"""What does preprocessing LabelEncoder do?
+LabelEncoder can be used to normalize labels. It can also be used to transform non-numerical labels (as long as they are hashable and comparable) to numerical labels. Fit label encoder.
+"""
 labelencoder_X = LabelEncoder()
-
-labelencoder_X.fit_transform(x[:,0])
+"""
+What does sklearn Fit_transform do?
+The fit_transform method from the sklearn. preprocessing class is used to preprocess the data for model training. The fit() method calculates the various required parameters, and the transform() method applies the calculated parameters to standardize the data.
+"""
+x[:,0]=labelencoder_X.fit_transform(x[:,0])
 labelencoder_X
+x[:,0]
 #------------------------------------------------------------
 
 labelencoder_y =LabelEncoder()
