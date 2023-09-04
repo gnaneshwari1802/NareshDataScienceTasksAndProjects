@@ -87,3 +87,5 @@ variance
 
 # deployment in flask & html 
 # mlops (azur, googlcolab, heroku, kubarnate)
+Simple Linear Regression with Experience -Salary Dataset
+split ratio(80%-20%, 70%-30%, 75%-25%)
