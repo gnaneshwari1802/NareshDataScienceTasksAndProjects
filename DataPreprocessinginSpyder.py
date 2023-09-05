@@ -9,6 +9,16 @@ Business Problem Understanding
 It is your job to predict if a passenger survived the sinking of the Titanic or not.
 For each in the test set, you must predict a 0 or 1 value for the variable.
 """
+"""
+Performing Data Cleaning and Analysis
+Understanding meaning of each column:
+Data Dictionary: Variable Description
+
+Survived - Survived (1) or died (0) Pclass - Passenger’s class (1 = 1st, 2 = 2nd, 3 = 3rd) Name - Passenger’s name Sex - Passenger’s sex Age - Passenger’s age SibSp - Number of siblings/spouses aboard Parch - Number of parents/children aboard (Some children travelled only with a nanny, therefore parch=0 for them.) Ticket - Ticket number Fare - Fare Cabin - Cabin Embarked - Port of embarkation (C = Cherbourg, Q = Queenstown, S = Southampton)
+
+Analysing which columns are completely useless in predicting the survival and deleting them
+Note - Don't just delete the columns because you are not finding it useful. Or focus is not on deleting the columns. Our focus is on analysing how each column is affecting the result or the prediction and in accordance with that deciding whether to keep the column or to delete the column or fill the null values of the column by some values and if yes, then what values.
+"""
 
 import numpy as np
 import pandas as pd
@@ -130,6 +140,8 @@ def getNumber(str):
         return 1
     else:
         return 2
+#Pandas.apply allow the users to pass a function and apply it on every single value of the Pandas series. It comes as a huge improvement for the pandas library as this function helps to segregate data according to the conditions required due to which it is efficiently used in data science and machine learning.
+      
 titanic["Gender"]=titanic["Sex"].apply(getNumber)
 #We have created a new column called "Gender" and 
 #filling it with values 1,2 based on the values of sex column
@@ -217,6 +229,19 @@ plt.pie(p,    #giving array
        colors = ['green', 'yellow'],   # Corresponding colors
        explode = (0.15, 0),    #How much the gap should me there between the pies
        startangle = 0)  #what start angle should be given
+"""Matplotlib is a plotting library for creating static, animated, and interactive visualizations in Python. Pyplot is a Matplotlib module which provides a MATLAB-like interface. Matplotlib is designed to be as usable as MATLAB, with the ability to use Python and the advantage of being free and open-source.
+"""
+"""
+matplotlib.pyplot.axis()
+This function is used to set some axis properties to the graph.
+
+Syntax: matplotlib.pyplot.axis(*args, emit=True, **kwargs)
+
+Parameters:
+xmin, xmax, ymin, ymax:These parameters can be used to
+set the axis limits on the graph
+emit:Its a bool value used to notify observers of the axis limit change"""
+
 plt.axis('equal') 
 plt.show()
 # More Precise Pie Chart
