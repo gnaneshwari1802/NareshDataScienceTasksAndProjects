@@ -119,7 +119,7 @@ Python Seaborn module contains various functions to plot the data and depict the
 
 """
 # Seaborn Kernel Density Estimation (KDE) Plot
-# • The kernel density estimate (KDE) plot is a useful tool for plotting the shape of a distribution.
+# • The kernel density estimate (KDE) plot is a useful tool for plotting the shape of a distribution.
 # • Seaborn kdeplot is another seaborn plotting function that fits and plot a univariate or bivariate
 # kernel density estimate.
 # • Like the histogram, the KDE plots encode the density of observations on one axis with height
@@ -892,7 +892,10 @@ plt.show()
 # Visualize linear relationship with Seaborn regplot() function
 # 
 # Seaborn regplot() function
-
+seaborn.regplot() :
+# This method is used to plot data and a linear regression model fit.
+# There are a number of mutually exclusive options for estimating the regression model. 
+# Syntax : seaborn.regplot( x,  y,  data=None, x_estimator=None, x_bins=None,  x_ci=’ci’, scatter=True, fit_reg=True, ci=95, n_boot=1000, units=None, order=1, logistic=False, lowess=False, robust=False, logx=False, x_partial=None, y_partial=None, truncate=False, dropna=True, x_jitter=None, y_jitter=None, label=None, color=None, marker=’o’,    scatter_kws=None, line_kws=None, ax=None)
 # • This function plots data and a linear regression model fit.
 # 
 # • We can plot a linear regression model between Overall and Potential variable with
@@ -1210,7 +1213,50 @@ sinplot()
 
 sns.set_style("whitegrid")
 sinplot()
+"""
+seaborn.regplot() method is used to plot data and draw a linear regression model fit. There are several options for estimating the regression model, all of which are mutually exclusive.
 
+As we might already know, Regrression Analysis is a technique used to evaluate the relationship between independent factors and dependent attributes. Hence, this model is used to create a regression plot.
+
+The regplot() and lmplot() functions are relatively close, but the regplot() method is an axes level function while the other is not. Matplotlib axes containing the plot are returned as a result of this method.
+
+Syntax
+Following is the syntax of seaborn.regplot() method −
+
+seaborn.regplot(*, x=None, y=None, data=None, x_estimator=None, x_bins=None, x_ci='ci', scatter=True, fit_reg=True, ci=95, n_boot=1000, units=None, seed=None, order=1, logistic=False, lowess=False, robust=False, logx=False, x_partial=None, y_partial=None, truncate=True, dropna=True, x_jitter=None, y_jitter=None, label=None, color=None, marker='o', scatter_kws=None, line_kws=None, ax=None)
+Parameters
+Some of the parameters of the regplot() method are discussed below.
+
+S.No	Parameter and Description
+1	x,y
+These parameters take names of variables as input that plot the long form data.
+
+2	data
+This is the dataframe that is used to plot graphs.
+
+3	x_estimator
+This is a callable that accepts values and maps vectors to scalars. It is an optional parameter. Each distinct value of x is applied to this function, and the estimated value is plotted as a result. When x is a discrete variable, this is helpful. This estimate will be bootstrapped and a confidence interval will be drawn if x_ci is provided.
+
+4	x_bins
+This optional parameter accepts int or vector as input. The x variable is binned into discrete bins and then the central tendency and confidence interval are estimated.
+
+5	{x,y}_jitter
+This optional parameter accepts floating point values. Add uniform random noise of this size to either the x or y variables.
+
+6	color
+Used to specify a single color, and this color is applied to all plot elements.
+
+7	marker
+This is the marker that is used to plot the data points in the graph.
+
+8	x_ci
+Takes values from ciâ€, â€œsdâ€, int in [0, 100] or None. It is an optional parameter.
+
+The size of the confidence interval used when plotting a central tendency for discrete values of x is determined by the value passed to this parameter.
+
+9	logx
+Takes boolean vaules and if True, plots the scatterplot and regression model in the input space while also estimating a linear regression of the type y log(x). For this to work, x must be positive.
+"""
 
 # In[102]:
 
