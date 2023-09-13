@@ -25,6 +25,31 @@ print(dataset.dtypes)
 #dropping the id and date column
 dataset = dataset.drop(['id','date'], axis = 1)
 #understanding the distribution with seaborn
+"""
+The Seaborn.plotting_context() method gets the parameters that control the scaling of plot elements. The scaling does not effect the overall style of the plot but it does affect things like labels, lines and other elements of the plot. It is done using the matplotlib rcParams system.
+
+For example, if the base context is â€œnotebookâ€ and other contexts are â€œposterâ€, â€œpaperâ€ and â€œinformationâ€. These other contexts are the notebook parameters scaled by different values. Font elements in a context can also be scaled independently.
+
+This function can also be used to alter the global default values.
+
+Syntax
+Following is the syntax of the plotting_context() method −
+
+seaborn.plotting_context(context=None, font_scale=1, rc=None)
+Parameters
+Following are the parameters of this method −
+
+S.No	Parameter and Description
+1	context
+Takes the following as input none, dict, or one of {paper, notebook, talk, poster} and determines a dictionary of parameters or the name of a preconfigured set.
+
+2	Rc
+Takes rcdict as value and is an optional parameter that performs Parameter mappings to override the values in the preset seaborn style dictionaries. This only updates parameters that are considered part of the style definition.
+
+3	Font_scale
+Takes a floating point value as input, and is optional parameter. It separate scaling factor to independently scale the size of the font elements.
+
+"""
 with sns.plotting_context("notebook",font_scale=2.5):
     g = sns.pairplot(dataset[['sqft_lot','sqft_above','price','sqft_living','bedrooms']],hue='bedrooms', palette='tab20',size=6)
 g.set(xticklabels=[]);
