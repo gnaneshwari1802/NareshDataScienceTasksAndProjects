@@ -91,7 +91,29 @@ def backwardElimination(x, SL):
                         continue
     regressor_OLS.summary()
     return x
- 
+"""
+The code you provided appears to implement a backward elimination method for feature selection in linear regression. The purpose of this code is to iteratively remove features (independent variables) from the input data x based on their p-values until the significance level (SL) is reached or until no more features can be removed without reducing the adjusted R-squared value.
+
+Here is an overview of how the code works:
+
+It initializes some variables, including numVars (the number of independent variables), and creates a temporary array temp to store removed features.
+
+It enters a loop that iterates over the independent variables one by one.
+
+Inside the loop:
+
+It fits an OLS (Ordinary Least Squares) regression model (regressor_OLS) using the current set of independent variables x.
+It calculates the maximum p-value among the coefficients in the model.
+It calculates the adjusted R-squared value before removing any features.
+If the maximum p-value is greater than the significance level (SL), it enters another loop to identify the variable with the maximum p-value and removes it from x. This is done using the np.delete function.
+It fits a new OLS regression model (tmp_regressor) with the updated x and calculates the adjusted R-squared value after the removal.
+It compares the adjusted R-squared value before and after removal. If the adjusted R-squared value has not decreased, it means that removing the feature did not significantly affect the model's performance, so the code continues removing more features.
+If removing the feature decreased the adjusted R-squared value, the code rolls back the last removal by adding the removed feature back to x and returns the updated x with the feature rollback.
+After the loop completes, the code prints the summary of the final regressor_OLS model and returns the updated x with the selected features.
+
+It's worth noting that the code does not explicitly define y, which should be the dependent variable for the linear regression model. Additionally, it does not include import statements for the required libraries (np and sm) or the necessary library initializations. Make sure to import the required libraries and provide the y variable before using this code.
+"""
+
 SL = 0.05
 X_opt = X[:, [0, 1, 2, 3, 4, 5,6,7,8,9,10,11,12,13,14,15,16,17]]
 X_Modeled = backwardElimination(X_opt, SL)
