@@ -1277,7 +1277,27 @@ sinplot()
 
 sns.set_style("ticks")
 sinplot()
+"""
+The Seaborn.set_style() method sets the parameters that control the general style of the plots. This method works closely with the seaborn.axes_style() method as this also checks whether the grid is enabled by default and uses its style parameters control various properties like background color etc.
 
+Setting these parameters to control the general style of the plot can be accomplished by the matplotlib rcParams system.
+
+Syntax
+Following is the syntax of the seaborn.set_style() method −
+
+seaborn.set_style(style=None, rc=None)
+Parameters
+Following are the parameters of seaborn.set_style() method −
+
+S.No	Parameter and Description
+1	Style
+Takes values, None, dict, or one of {darkgrid, whitegrid, dark, white, ticks} and determines a dictionary of parameters or the name of a preconfigured style.
+
+2	Rc
+Takes rcdict as value and is an optional parameter that performs Parameter mappings to override the values in the preset seaborn style dictionaries. This only updates parameter that are considered part of the style definition.
+
+Now we will move onto understanding the method and using it in examples.
+"""
 
 # With that, we come to the end of this tutorial.
 # I hope you find it useful.
