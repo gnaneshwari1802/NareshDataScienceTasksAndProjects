@@ -31,17 +31,33 @@ import numpy as np
 
 #Import graphical plotting libraries
 import seaborn as sns
+Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. For a brief introduction to the ideas behind the library, you can read the introductory notes or the paper.
 import matplotlib.pyplot as plt
+What is matplotlib Pyplot in Python?
+Pyplot is an API (Application Programming Interface) for Python's matplotlib that effectively makes matplotlib a viable open source alternative to MATLAB. Matplotlib is a library for data visualization, typically in the form of plots, graphs and charts.
 #%matplotlib inline
 
 #Import Linear Regression Machine Learning Libraries
 from sklearn import preprocessing
+What is Sklearn in Python?
+Scikit-learn (Sklearn) is the most useful and robust library for machine learning in Python. It provides a selection of efficient tools for machine learning and statistical modeling including classification, regression, clustering and dimensionality reduction via a consistence interface in Python.
 from sklearn.preprocessing import PolynomialFeatures
+What is polynomial features in sklearn?
+In simple terms, PolynomialFeatures is a method for feature engineering that creates new features by raising the existing features to a power. For example, if we have a feature x, we can create a new feature x^2 by squaring x. We can also create a new feature x^3 by cubing x, and so on.
+The sklearn. preprocessing package provides several common utility functions and transformer classes to change raw feature vectors into a representation that is more suitable for the downstream estimators. In general, learning algorithms benefit from standardization of the data set.
 from sklearn.model_selection import train_test_split
 
 from sklearn.linear_model import LinearRegression, Ridge, Lasso
 from sklearn.metrics import r2_score
-
+What is r2_score in Python?
+R^2 (coefficient of determination) regression score function. Best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a R^2 score of 0.0.
+Why use sklearn metrics?
+Scikit learn metrics are used to implement the function assessing the prediction error for a specified purpose. Multiple types of scikit learn metrics are available in the module of sklearn. The module of sklearn metrics implements several utility functions and measures the classification's performance.
+What is ridge in Python?
+Understanding Ridge Regression Using Python - Shiksha Online
+Ridge regression is a regularization technique that penalizes the size of the regression coefficient based on the l2 norm. It is also known as L2 regularization. It is used to eliminate multicollinearity in models. Suitable for the dataset that has a higher number of predictor variables than the number of observations.
+Lasso regression penalizes less important features of your dataset and makes their respective coefficients zero, thereby eliminating them. Thus it provides you with the benefit of feature selection and simple model creation. So, if the dataset has high dimensionality and high correlation, lasso regression can be used.
+Lasso regression includes a regularization penalty in the objective function, which helps prevent overfitting and improve the model’s generalization performance. The penalty shrinks the coefficients towards zero, resulting in a simpler model that is less prone to overfitting.
 data = pd.read_csv(r'C:\Users\M GNANESHWARI\Desktop\17th\17th\lasso, ridge, elastic net\TASK-22_LASSO,RIDGE\car-mpg.csv')
 data.head()
 
@@ -55,7 +71,9 @@ data['origin'] = data['origin'].replace({1: 'america', 2: 'europe', 3: 'asia'})
 data = pd.get_dummies(data,columns = ['origin'])
 data = data.replace('?', np.nan)
 data = data.apply(lambda x: x.fillna(x.median()), axis = 0)
-data.head() 
+Pandas.apply allow the users to pass a function and apply it on every single value of the Pandas series. It comes as a huge improvement for the pandas library as this function helps to segregate data according to the conditions required due to which it is efficiently used in data science and machine learning.
+apply() method. This function acts as a map() function in Python. It takes a function as an input and applies this function to an entire DataFrame. If you are working with tabular data, you must specify an axis you want your function to act on ( 0 for columns; and 1 for rows).
+    data.head() 
 """
 We have to predict the mpg column given the features.
 
@@ -74,6 +92,8 @@ y = data[['mpg']] #dependent variable
 #Scaling the data
 
 X_s = preprocessing.scale(X)
+What is scale () in Python?
+The scale() function is an inbuilt function in the Python Wand ImageMagick library which is used to change the image size by scaling each pixel value by given columns and rows. Syntax: scale(columns, rows)
 X_s = pd.DataFrame(X_s, columns = X.columns) #converting scaled data into dataframe
 
 y_s = preprocessing.scale(y)
@@ -86,7 +106,7 @@ X_train.shape
 #Fit simple linear model and find coefficients
 regression_model = LinearRegression()
 regression_model.fit(X_train, y_train)
-
+Often, when dealing with iterators, we also need to keep a count of iterations. Python eases the programmers’ task by providing a built-in function enumerate() for this task. The enumerate () method adds a counter to an iterable and returns it in the form of an enumerating object. This enumerated object can then be used directly for loops or converted into a list of tuples using the list() function.
 for idx, col_name in enumerate(X_train.columns):
     print('The coefficient for {} is {}'.format(col_name, regression_model.coef_[0][idx]))
     
