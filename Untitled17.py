@@ -15,7 +15,23 @@ import numpy as np
 
 
 get_ipython().run_line_magic('matplotlib', 'notebook')
+"""
+Magic commands, also known as magics, are one of the improved distinctions that IPython has compared to the classic Python shell. Magics are introduced to ease the efforts of commonly occurring tasks in data analysis using Python. They majorly determine the behavior of the IPython session.
 
+matplotlib inline is a magic command that acts as a convenience function instead of clumsy python code to perform some configuration for the matplotlib in the current IPython session.
+What is matplotlib inline in Python?
+In IPython, there are various built-in functions known as magic functions. The magic functions are also called magic commands as they have a specific syntax used to call these magic functions.
+
+The magic commands are of two kinds
+
+line-oriented magic commands
+cell-oriented magic commands
+Line-Oriented Magic Commands
+The line-oriented magic commands are also known as line magics. The syntax of line magics starts with a single percentage % followed by a command name followed by arguments. The command after % sign analogy can be seen with the command line interface of the operating system. The line magics do not contain any parenthesis or quotes.
+
+Examples of line magics are: - %autowait, - %config, - %alias, - %conda, - %debug, - %load, - %notebook, - %macro, - %matplotlib, - so on
+Some line magics have returns values that can be assigned to some variable and further used.
+"""
 
 # Displaying Plots in Matplotlib
 
