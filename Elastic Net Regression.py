@@ -9,8 +9,16 @@ from numpy import arange
 from pandas import read_csv
 import sklearn
 from sklearn.model_selection import GridSearchCV
+What is GridSearchCV used for?
+What is GridSearchCV used for? GridSearchCV is a technique for finding the optimal parameter values from a given set of parameters in a grid. It's essentially a cross-validation technique.
 from sklearn.model_selection import RepeatedKFold
+Repeated K-Fold cross validator.
+
+Repeats K-Fold n times with different randomization in each repetition.
+  Repeated k-fold cross-validation provides a way to improve the estimated performance of a machine learning model. This involves simply repeating the cross-validation procedure multiple times and reporting the mean result across all folds from all runs.
 from sklearn.linear_model import ElasticNet
+What is an elastic net regression?
+What is elastic net regression? Elastic net regression is a linear regression technique that uses a penalty term to shrink the coefficients of the predictors. The penalty term is a combination of the l1-norm (absolute value) and the l2-norm (square) of the coefficients, weighted by a parameter called alpha.
 # load the dataset
 url = 'https://raw.githubusercontent.com/jbrownlee/Datasets/master/housing.csv'
 dataframe = read_csv(url, header=None)
