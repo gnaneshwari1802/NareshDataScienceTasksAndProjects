@@ -9,7 +9,10 @@
 import matplotlib.pyplot as plt 
 import matplotlib.style as style
 from collections import Counter 
+The collection Module in Python provides different types of containers. A Container is an object that is used to store different objects and provide a way to access the contained objects and iterate over them. Some of the built-in containers are Tuple, List, Dictionary, etc. In this article, we will discuss the different containers provided by the collections module.
 get_ipython().run_line_magic('matplotlib', 'inline')
+What is Run_line_magic?
+magic() method basically does the of prepending the argument provided with a % if you were in an ipython shell. Third, we use the run_line_magic() method on the ip object to run our line magic. This method takes two arguments: the name of the magic function and the remaining of the arguments for that magic.
 import pandas as pd
 import numpy as np
 import itertools
@@ -68,6 +71,8 @@ f, ax=plt.subplots(figsize=(8,6))
 x=amir["Annual_HH_Income"]
 y=pd.Series(x,name="Annual_HH_Income")
 ax=sns.kdeplot(x,shade=True,color="r")
+What is a KDE plot in Seaborn?
+Kdeplot is a Kernel Distribution Estimation Plot which depicts the probability density function of the continuous or non-parametric data variables i.e. we can plot for the univariate or multiple variables altogether. Using the Python Seaborn module, we can build the Kdeplot with various functionality added to it.
 plt.show()
 
 
@@ -147,9 +152,13 @@ amir["Mthly_HH_Expense"].mode()
 
 
 monthly_expences = pd.crosstab(index=amir["Mthly_HH_Expense"],columns="count") 
+What is PD crosstab?
+The Crosstab function is one of the many methods that help you reshape your data in Pandas. At first glance, its purpose appears to be comparable to pivot, and you can perform many of the same things with Pandas Crosstab as you can with Pandas Pivot Table.
 monthly_expences.reset_index(inplace=True)
+  What does reset_index do in Pandas?
+Definition and Usage. The reset_index() method allows you reset the index back to the default 0, 1, 2 etc indexes. By default this method will keep the "old" idexes in a column named "index", to avoid this, use the drop parameter.
 monthly_expences[monthly_expences["count"]== amir.Mthly_HH_Expense.value_counts()] 
-
+value_counts() The value_counts() function returns a Series that contain counts of unique values. It returns an object that will be in descending order so that its first element will be the most frequently-occurred element. By default, it excludes NA values.
 
 # In[26]:
 
@@ -354,7 +363,8 @@ pd.DataFrame(amir.iloc[:,0:4].var().to_frame()).T
 
 pd.DataFrame(amir.iloc[:,0:4].var().to_frame())
 
-
+What is To_frame () in Python?
+to_frame() function is used to convert the given series object to a dataframe. Syntax: Series.to_frame(name=None) Parameter : name : The passed name should substitute for the series name (if it has one).
 # In[37]:
 
 
