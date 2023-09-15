@@ -17,11 +17,20 @@ Repeated K-Fold cross validator.
 Repeats K-Fold n times with different randomization in each repetition.
   Repeated k-fold cross-validation provides a way to improve the estimated performance of a machine learning model. This involves simply repeating the cross-validation procedure multiple times and reporting the mean result across all folds from all runs.
 from sklearn.linear_model import ElasticNet
+#What is an elastic net regression?
+#What is elastic net regression? Elastic net regression is a linear regression technique that uses a penalty term to shrink the coefficients of the predictors. The penalty term is a combination of the l1-norm (absolute value) and the l2-norm (square) of the coefficients, weighted by a parameter called alpha.
+# load the dataset
+# =============================================================================
+# import os  
+# path = os.path.abspath(r'file path')
+# f = open(path)
+# print(f)
+# =============================================================================
 What is an elastic net regression?
 What is elastic net regression? Elastic net regression is a linear regression technique that uses a penalty term to shrink the coefficients of the predictors. The penalty term is a combination of the l1-norm (absolute value) and the l2-norm (square) of the coefficients, weighted by a parameter called alpha.
 # load the dataset
 url = 'https://raw.githubusercontent.com/jbrownlee/Datasets/master/housing.csv'
-dataframe = read_csv(url, header=None)
+dataframe = pd.read_csv(url, header=None)
 data = dataframe.values
 print(data)
 X, y = data[:, :-1], data[:, -1]
@@ -66,8 +75,9 @@ from numpy import arange
 from pandas import read_csv
 from sklearn.linear_model import ElasticNetCV
 from sklearn.model_selection import RepeatedKFold
-# load the dataset
+import urllib.request
 url = 'https://raw.githubusercontent.com/jbrownlee/Datasets/master/housing.csv'
+#dataframe = urllib.request.Request(url)
 dataframe = read_csv(url, header=None)
 data = dataframe.values
 X, y = data[:, :-1], data[:, -1]
