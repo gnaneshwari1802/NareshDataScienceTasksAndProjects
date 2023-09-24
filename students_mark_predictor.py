@@ -1,12 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Sep 22 11:38:04 2023
 
-@author: M GNANESHWARI
-"""
-
-
-"""This source code created by IndianAIProduction.com team
+This source code created by IndianAIProduction.com team
 https://indianaiproduction.com/ml-project-student-mark-prediction/
 
 Project Tutorial: https://youtu.be/U_oJqcyc0eI
@@ -16,7 +9,6 @@ For video tutorial visit our youtube channel
 www.youtube.com\IndianAIProduction
 
 Business Problem
-"""
 
 #Import libraries
 import numpy as np
@@ -27,7 +19,7 @@ Load Dataset
 
 path = r"https://drive.google.com/uc?export=download&id=13ZTYmL3E8S0nz-UKl4aaTZJaI3DVBGHM"
 df  = pd.read_csv(path)
-df     
+     
 
 df.head()
      
@@ -48,6 +40,7 @@ study_hours	student_marks
 199	8.35	83.50
 
 df.shape
+
      
 (200, 2)
 Discover and visualize the data to gain insights
@@ -102,7 +95,7 @@ dtype: float64
 
 df2 = df.fillna(df.mean())
      
-df2
+
 df2.isnull().sum()
      
 study_hours      0
@@ -125,8 +118,10 @@ X = df2.drop("student_marks", axis = "columns")
 y = df2.drop("study_hours", axis = "columns")
 print("shape of X = ", X.shape)
 print("shape of y = ", y.shape)
-X,y     
-X.shape,y.shape 
+     
+shape of X =  (200, 1)
+shape of y =  (200, 1)
+
 from sklearn.model_selection import train_test_split
 X_train, X_test,y_train,y_test = train_test_split(X,y, test_size = 0.2, random_state=51)
 print("shape of X_train = ", X_train.shape)
@@ -141,13 +136,13 @@ shape of y_test =  (40, 1)
 Select a model and train it
 
  # y = m * x + c
-from sklearn.linear_model import LinearRegression
-lr = LinearRegression()
+ from sklearn.linear_model import LinearRegression
+ lr = LinearRegression()
      
 
 lr.fit(X_train,y_train)
      
-LinearRegression(copy_X=True, fit_intercept=True, n_jobs=None, normalize=False)
+LinearRegression(copy_X=True, fit_intercept=True, n_jobs=None)
 
 lr.coef_
      
