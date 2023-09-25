@@ -1,0 +1,357 @@
+import os
+import nltk
+# !pip install wordcloud
+# !pip install nltk wordcloud
+# !conda install -c conda-forge wordcloud
+
+
+#nltk.download() 
+#import nltk.corpus
+# we will see what is mean by corpora and what all are availabel in nltk python library
+#print(os.listdir(nltk.data.find('corpora')))
+
+#you get a lot of file , some of have some textual document, different function associated with that function , stopwords, differenent type of function 
+#for our example i will lets take consideration as brown & we will understand what exactly nlp can do 
+#from nltk.corpus import brown
+#brown.words() 
+#nltk.corpus.brown.fileids()
+#nltk.corpus.gutenberg
+#nltk.corpus.gutenberg.fileids() 
+# you can also create your own words 
+
+AI = '''Artificial Intelligence refers to the intelligence of machines. This is in contrast to the natural intelligence of 
+humans and animals. With Artificial Intelligence, machines perform functions such as learning, planning, reasoning and 
+problem-solving. Most noteworthy, Artificial Intelligence is the simulation of human intelligence by machines. 
+It is probably the fastest-growing development in the World of technology and innovation. Furthermore, many experts believe
+AI could solve major challenges and crisis situations.'''
+AI
+'Artificial Intelligence refers to the intelligence of machines. This is in contrast to the natural intelligence of \nhumans and animals. With Artificial Intelligence, machines perform functions such as learning, planning, reasoning and \nproblem-solving. Most noteworthy, Artificial Intelligence is the simulation of human intelligence by machines. \nIt is probably the fastest-growing development in the World of technology and innovation. Furthermore, many experts believe\nAI could solve major challenges and crisis situations.'
+type(AI) 
+# str
+from nltk.tokenize import word_tokenize 
+AI_tokens = word_tokenize(AI)
+AI_tokens
+
+ 
+
+len(AI_tokens)
+# 81
+from nltk.tokenize import sent_tokenize 
+AI_sent = sent_tokenize(AI)
+AI_sent
+# ['Artificial Intelligence refers to the intelligence of machines.',
+#  'This is in contrast to the natural intelligence of \nhumans and animals.',
+#  'With Artificial Intelligence, machines perform functions such as learning, planning, reasoning and \nproblem-solving.',
+#  'Most noteworthy, Artificial Intelligence is the simulation of human intelligence by machines.',
+#  'It is probably the fastest-growing development in the World of technology and innovation.',
+#  'Furthermore, many experts believe\nAI could solve major challenges and crisis situations.']
+len(AI_sent)
+# 6
+AI
+# 'Artificial Intelligence refers to the intelligence of machines. This is in contrast to the natural intelligence of \nhumans and animals. With Artificial Intelligence, machines perform functions such as learning, planning, reasoning and \nproblem-solving. Most noteworthy, Artificial Intelligence is the simulation of human intelligence by machines. \nIt is probably the fastest-growing development in the World of technology and innovation. Furthermore, many experts believe\nAI could solve major challenges and crisis situations.'
+from nltk.tokenize import blankline_tokenize # GiVE YOU HOW MANY PARAGRAPH
+AI_blank = blankline_tokenize(AI) 
+AI_blank
+#AI_blank
+# ['Artificial Intelligence refers to the intelligence of machines. This is in contrast to the natural intelligence of \nhumans and animals. With Artificial Intelligence, machines perform functions such as learning, planning, reasoning and \nproblem-solving. Most noteworthy, Artificial Intelligence is the simulation of human intelligence by machines. \nIt is probably the fastest-growing development in the World of technology and innovation. Furthermore, many experts believe\nAI could solve major challenges and crisis situations.']
+len(AI_blank) 
+1
+# NEXT WE WILL SEE HOW WE WILL USE UNI-GRAM,BI-GRAM,TRI-GRAM USING NLTK
+
+from nltk.util import bigrams,trigrams,ngrams 
+string = 'the best and most beautifull thing in the world cannot be seen or even touched,they must be felt with heart'
+quotes_tokens = nltk.word_tokenize(string)
+quotes_tokens
+
+len(quotes_tokens)
+# 23
+quotes_bigrams = list(nltk.bigrams(quotes_tokens))
+quotes_bigrams
+# [('the', 'best'),
+#  ('best', 'and'),
+#  ('and', 'most'),
+#  ('most', 'beautifull'),
+#  ('beautifull', 'thing'),
+#  ('thing', 'in'),
+#  ('in', 'the'),
+#  ('the', 'world'),
+#  ('world', 'can'),
+#  ('can', 'not'),
+#  ('not', 'be'),
+#  ('be', 'seen'),
+#  ('seen', 'or'),
+#  ('or', 'even'),
+#  ('even', 'touched'),
+#  ('touched', ','),
+#  (',', 'they'),
+#  ('they', 'must'),
+#  ('must', 'be'),
+#  ('be', 'felt'),
+#  ('felt', 'with'),
+#  ('with', 'heart')]
+quotes_tokens
+# ['the',
+#  'best',
+#  'and',
+#  'most',
+#  'beautifull',
+#  'thing',
+#  'in',
+#  'the',
+#  'world',
+#  'can',
+#  'not',
+#  'be',
+#  'seen',
+#  'or',
+#  'even',
+#  'touched',
+#  ',',
+#  'they',
+#  'must',
+#  'be',
+#  'felt',
+#  'with',
+#  'heart']
+quotes_trigrams = list(nltk.trigrams(quotes_tokens))
+quotes_trigrams
+# [('the', 'best', 'and'),
+#  ('best', 'and', 'most'),
+#  ('and', 'most', 'beautifull'),
+#  ('most', 'beautifull', 'thing'),
+#  ('beautifull', 'thing', 'in'),
+#  ('thing', 'in', 'the'),
+#  ('in', 'the', 'world'),
+#  ('the', 'world', 'can'),
+#  ('world', 'can', 'not'),
+#  ('can', 'not', 'be'),
+#  ('not', 'be', 'seen'),
+#  ('be', 'seen', 'or'),
+#  ('seen', 'or', 'even'),
+#  ('or', 'even', 'touched'),
+#  ('even', 'touched', ','),
+#  ('touched', ',', 'they'),
+#  (',', 'they', 'must'),
+#  ('they', 'must', 'be'),
+#  ('must', 'be', 'felt'),
+#  ('be', 'felt', 'with'),
+#  ('felt', 'with', 'heart')]
+# quotes_trigrams = list(nltk.ngrams(quotes_tokens))
+# quotes_trigrams
+# ---------------------------------------------------------------------------
+
+quotes_ngrams = list(nltk.ngrams(quotes_tokens, 4)) 
+quotes_ngrams
+
+#it has given n-gram of length 4
+len(quotes_tokens)
+23
+quotes_ngrams_1 = list(nltk.ngrams(quotes_tokens, 5)) 
+quotes_ngrams_1
+
+quotes_ngrams = list(nltk.ngrams(quotes_tokens, 9)) 
+quotes_ngrams
+
+# Next we need to make some changes in tokens and that is called as stemming, stemming will gives you root form of an word
+# also we will see some root form of the word & limitation of the word
+
+#porter-stemmer
+from nltk.stem import PorterStemmer
+pst = PorterStemmer()
+pst.stem('having') #stem will gives you the root form of the word 
+# 'have'
+pst.stem('affection')
+# 'affect'
+pst.stem('playing')
+# 'play'
+pst.stem('give') 
+# 'give'
+words_to_stem=['give','giving','given','gave']
+for words in words_to_stem:
+    print(words+  ':' + pst.stem(words))
+
+pst.stem('playing')
+# 'play'
+words_to_stem=['give','giving','given','gave','thinking', 'loving', 'final', 'finalized', 'finally']
+# i am giving these different words to stem, using porter stemmer we get the output
+
+for words in words_to_stem:
+    print(words+ ':' +pst.stem(words))
+    
+#in porterstemmer removes ing and replaces with e
+# give:give
+# giving:give
+# given:given
+# gave:gave
+# thinking:think
+# loving:love
+# final:final
+# finalized:final
+# finally:final
+#another stemmer known as lencastemmer stemmer and lets see what the different we will get hear
+#stem the same thing using lencastemmer
+
+from nltk.stem import LancasterStemmer
+lst = LancasterStemmer()
+for words in words_to_stem:
+    print(words + ':' + lst.stem(words))
+    
+# lancasterstemmer is more aggresive then the porterstemmer
+# give:giv
+# giving:giv
+# given:giv
+# gave:gav
+# thinking:think
+# loving:lov
+# final:fin
+# finalized:fin
+# finally:fin
+words_to_stem=['give','giving','given','gave','thinking', 'loving', 'final', 'finalized', 'finally']
+# i am giving these different words to stem, using porter stemmer we get the output
+
+for words in words_to_stem:
+    print(words+ ':' +pst.stem(words))
+# give:give
+# giving:give
+# given:given
+# gave:gave
+# thinking:think
+# loving:love
+# final:final
+# finalized:final
+# finally:final
+#we have another stemmer called as snowball stemmer lets see about this snowball stemmer
+
+from nltk.stem import SnowballStemmer
+sbst = SnowballStemmer('english')
+for words in words_to_stem:
+    print(words+ ':' +sbst.stem(words))
+    
+#snowball stemmer is same as portstemmer
+#different type of stemmer used based on different type of task
+#if you want to see how many type of giv has occured then we will see the lancaster stemmer
+# give:give
+# giving:give
+# given:given
+# gave:gave
+# thinking:think
+# loving:love
+# final:final
+# finalized:final
+# finally:final
+#sometime stemming does not work & lets say e.g - fish,fishes & fishing all of them belongs to root word fish, 
+#one hand stemming will cut the end & lemmatization will take into the morphological analysis of the word
+
+from nltk.stem import wordnet
+from nltk.stem import WordNetLemmatizer
+word_lem = WordNetLemmatizer()
+
+#Hear we are going to wordnet dictionary & we are going to import the wordnet lematizer
+words_to_stem
+#word_lem.lemmatize('corpora') #we get output as corpus 
+
+#refers to a collection of texts. Such collections may be formed of a single language of texts, or can span multiple languages -- there are numerous reasons for which multilingual corpora (the plural of corpus) may be useful
+
+for words in words_to_stem:
+    print(words+ ':' +word_lem.lemmatize(words))
+
+pst.stem('final')
+
+lst.stem('finally')
+
+sbst.stem('finalized')
+
+lst.stem('final')
+
+lst.stem('finalized')
+
+# there is other concept called POS (part of speech) which deals with subject, noun, pronoun but before of this lets go with other concept called STOPWORDS
+# STOPWORDS = i, is, as,at, on, about & nltk has their own list of stopewords 
+
+from nltk.corpus import stopwords
+stopwords.words('english') 
+
+len(stopwords.words('english')) 
+
+stopwords.words('spanish')
+
+len(stopwords.words('spanish')) 
+
+stopwords.words('french') 
+
+
+
+len(stopwords.words('french')) 
+
+stopwords.words('german') 
+
+len(stopwords.words('german'))
+
+# stopwords.words('hindi') # research phase 
+# stopwords.words('marathi') 
+
+# stopwords.words('telugu') 
+
+import re
+punctuation = re.compile(r'[-.?!,:;()|0-9]') 
+
+#now i am going to create to empty list and append the word without any punctuation & naming this as a post punctuation
+punctuation=re.compile(r'[-.?!,:;()|0-9]', re.UNICODE)
+AI
+AI_tokens
+len(AI_tokens)
+# we will see how to work in POS using NLTK library
+
+sent = 'kathy is a natural when it comes to drawing'
+sent_tokens = word_tokenize(sent)
+sent_tokens
+
+# first we will tokenize usning word_tokenize & then we will use pos_tag on all of the tokens 
+
+for token in sent_tokens:
+    print(nltk.pos_tag([token]))
+
+sent2 = 'john is eating a delicious cake'
+sent2_tokens = word_tokenize(sent2)
+
+for token in sent2_tokens:
+    print(nltk.pos_tag([token]))
+
+# Another concept of POS is called NER ( NAMED ENTITIY RECOGNITION ), NER is the process of detecting name such as movie, moneytary value,organiztion, location, quantities & person
+# there are 3 phases of NER - ( 1ST PHASE IS - NOUN PHRASE EXTRACTION OR NOUN PHASE IDENTIFICATION - This step deals with extract all the noun phrases from text using dependencies parsing and pos tagging
+# 2nd step we have phrase classification - this is the classification where all the extracted nouns & phrase are classified into category such as location,names and much more 
+# some times entity are misclassification 
+# so if you are use NER in python then you need to import NER_CHUNK from nltk library
+from nltk import ne_chunk
+NE_sent = 'The US president stays in the WHITEHOUSE '
+NE_tokens = word_tokenize(NE_sent)
+
+#after tokenize need to add the pos tags
+NE_tokens
+
+NE_tags = nltk.pos_tag(NE_tokens)
+NE_tags
+
+#we are passin the NE_NER into ne_chunks function and lets see the outputs
+
+NE_NER = ne_chunk(NE_tags)
+print(NE_NER)
+
+new = 'the big cat ate the little mouse who was after fresh cheese'
+new_tokens = nltk.pos_tag(word_tokenize(new))
+new_tokens
+
+# tokenize done and lets add the pos tags also
+# Libraries
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+# Create a list of word
+text=("Python Python Python Matplotlib Matplotlib Seaborn Network Plot Violin Chart Pandas Datascience Wordcloud Spider Radar Parrallel Alpha Color Brewer Density Scatter Barplot Barplot Boxplot Violinplot Treemap Stacked Area Chart Chart Visualization Dataviz Donut Pie Time-Series Wordcloud Wordcloud Sankey Bubble")
+text
+# Create the wordcloud object
+wordcloud = WordCloud(width=480, height=480, margin=0).generate(text) 
+# Display the generated image:
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis("off")
+plt.margins(x=0, y=0)
+plt.show()
