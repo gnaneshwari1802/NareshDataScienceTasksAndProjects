@@ -1,0 +1,26 @@
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[32], line 58
+     56 similar_freedom = model.wv.most_similar('freedom')
+     57 similar_vikram = model.wv.most_similar('vikram')
+---> 58 similar_son = model.wv.most_similar('son')
+     60 print("Vocabulary:", words)
+     61 print("Vector for 'war':", vector)
+
+File /opt/conda/envs/anaconda-panel-2023.05-py310/lib/python3.11/site-packages/gensim/models/keyedvectors.py:841, in KeyedVectors.most_similar(self, positive, negative, topn, clip_start, clip_end, restrict_vocab, indexer)
+    838         weight[idx] = item[1]
+    840 # compute the weighted average of all keys
+--> 841 mean = self.get_mean_vector(keys, weight, pre_normalize=True, post_normalize=True, ignore_missing=False)
+    842 all_keys = [
+    843     self.get_index(key) for key in keys if isinstance(key, _KEY_TYPES) and self.has_index_for(key)
+    844 ]
+    846 if indexer is not None and isinstance(topn, int):
+
+File /opt/conda/envs/anaconda-panel-2023.05-py310/lib/python3.11/site-packages/gensim/models/keyedvectors.py:518, in KeyedVectors.get_mean_vector(self, keys, weights, pre_normalize, post_normalize, ignore_missing)
+    516         total_weight += abs(weights[idx])
+    517     elif not ignore_missing:
+--> 518         raise KeyError(f"Key '{key}' not present in vocabulary")
+    520 if total_weight > 0:
+    521     mean = mean / total_weight
+
+KeyError: "Key 'son' not present in vocabulary"
