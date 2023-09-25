@@ -43,7 +43,7 @@ for i in range(len(sentences)):
     sentences[i] = [word for word in sentences[i] if word not in stopwords.words('english')]
 
 # Training the Word2Vec model
-model = Word2Vec(sentences, min_count=0)
+model = Word2Vec(sentences, min_count=1)
 
 # Accessing the vocabulary using index_to_key
 words = model.wv.index_to_key
