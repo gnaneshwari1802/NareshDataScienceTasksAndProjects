@@ -32,11 +32,18 @@ paragraph = """I have three visions for India. In 3000 years of our history, peo
                space, Professor Satish Dhawan, who succeeded him, and Dr. Brahm Prakash, father of nuclear material.
                I was lucky to have worked with all three of them closely and consider this the great opportunity of my life. 
                I see four milestones in my career. India is great compared to other countries."""
+print(paragraph)
+print(type(paragraph))
+print("\n")
 """import nltk
 nltk.download('punkt')
 """
 # Tokenizing sentences
 sentences = nltk.sent_tokenize(paragraph)
-
+print(sentences)
+print(type(sentences))
+print("\n")
 # Tokenizing words
 words = nltk.word_tokenize(paragraph)
+print(words)
+print(type(words))
