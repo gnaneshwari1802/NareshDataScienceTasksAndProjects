@@ -1,0 +1,413 @@
+[nltk_data] Downloading collection 'all'
+[nltk_data]    | 
+[nltk_data]    | Downloading package abc to /home/4a15499e-7d0d-4437-
+[nltk_data]    |     8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package abc is already up-to-date!
+[nltk_data]    | Downloading package alpino to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package alpino is already up-to-date!
+[nltk_data]    | Downloading package averaged_perceptron_tagger to /ho
+[nltk_data]    |     me/4a15499e-7d0d-4437-8b08-
+[nltk_data]    |     af41bc1d7635/nltk_data...
+[nltk_data]    |   Package averaged_perceptron_tagger is already up-
+[nltk_data]    |       to-date!
+[nltk_data]    | Downloading package averaged_perceptron_tagger_ru to 
+[nltk_data]    |     /home/4a15499e-7d0d-4437-8b08-
+[nltk_data]    |     af41bc1d7635/nltk_data...
+[nltk_data]    |   Package averaged_perceptron_tagger_ru is already
+[nltk_data]    |       up-to-date!
+[nltk_data]    | Downloading package basque_grammars to /home/4a15499e
+[nltk_data]    |     -7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package basque_grammars is already up-to-date!
+[nltk_data]    | Downloading package bcp47 to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package bcp47 is already up-to-date!
+[nltk_data]    | Downloading package biocreative_ppi to /home/4a15499e
+[nltk_data]    |     -7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package biocreative_ppi is already up-to-date!
+[nltk_data]    | Downloading package bllip_wsj_no_aux to /home/4a15499
+[nltk_data]    |     e-7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package bllip_wsj_no_aux is already up-to-date!
+[nltk_data]    | Downloading package book_grammars to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package book_grammars is already up-to-date!
+[nltk_data]    | Downloading package brown to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package brown is already up-to-date!
+[nltk_data]    | Downloading package brown_tei to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package brown_tei is already up-to-date!
+[nltk_data]    | Downloading package cess_cat to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package cess_cat is already up-to-date!
+[nltk_data]    | Downloading package cess_esp to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package cess_esp is already up-to-date!
+[nltk_data]    | Downloading package chat80 to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package chat80 is already up-to-date!
+[nltk_data]    | Downloading package city_database to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package city_database is already up-to-date!
+[nltk_data]    | Downloading package cmudict to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package cmudict is already up-to-date!
+[nltk_data]    | Downloading package comparative_sentences to /home/4a
+[nltk_data]    |     15499e-7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package comparative_sentences is already up-to-
+[nltk_data]    |       date!
+[nltk_data]    | Downloading package comtrans to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package comtrans is already up-to-date!
+[nltk_data]    | Downloading package conll2000 to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package conll2000 is already up-to-date!
+[nltk_data]    | Downloading package conll2002 to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package conll2002 is already up-to-date!
+[nltk_data]    | Downloading package conll2007 to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package conll2007 is already up-to-date!
+[nltk_data]    | Downloading package crubadan to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package crubadan is already up-to-date!
+[nltk_data]    | Downloading package dependency_treebank to /home/4a15
+[nltk_data]    |     499e-7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package dependency_treebank is already up-to-date!
+[nltk_data]    | Downloading package dolch to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package dolch is already up-to-date!
+[nltk_data]    | Downloading package europarl_raw to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package europarl_raw is already up-to-date!
+[nltk_data]    | Downloading package extended_omw to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package extended_omw is already up-to-date!
+[nltk_data]    | Downloading package floresta to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package floresta is already up-to-date!
+[nltk_data]    | Downloading package framenet_v15 to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package framenet_v15 is already up-to-date!
+[nltk_data]    | Downloading package framenet_v17 to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package framenet_v17 is already up-to-date!
+[nltk_data]    | Downloading package gazetteers to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package gazetteers is already up-to-date!
+[nltk_data]    | Downloading package genesis to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package genesis is already up-to-date!
+[nltk_data]    | Downloading package gutenberg to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package gutenberg is already up-to-date!
+[nltk_data]    | Downloading package ieer to /home/4a15499e-7d0d-4437-
+[nltk_data]    |     8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package ieer is already up-to-date!
+[nltk_data]    | Downloading package inaugural to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package inaugural is already up-to-date!
+[nltk_data]    | Downloading package indian to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package indian is already up-to-date!
+[nltk_data]    | Downloading package jeita to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package jeita is already up-to-date!
+[nltk_data]    | Downloading package kimmo to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package kimmo is already up-to-date!
+[nltk_data]    | Downloading package knbc to /home/4a15499e-7d0d-4437-
+[nltk_data]    |     8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package knbc is already up-to-date!
+[nltk_data]    | Downloading package large_grammars to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package large_grammars is already up-to-date!
+[nltk_data]    | Downloading package lin_thesaurus to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package lin_thesaurus is already up-to-date!
+[nltk_data]    | Downloading package mac_morpho to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package mac_morpho is already up-to-date!
+[nltk_data]    | Downloading package machado to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package machado is already up-to-date!
+[nltk_data]    | Downloading package masc_tagged to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package masc_tagged is already up-to-date!
+[nltk_data]    | Downloading package maxent_ne_chunker to /home/4a1549
+[nltk_data]    |     9e-7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package maxent_ne_chunker is already up-to-date!
+[nltk_data]    | Downloading package maxent_treebank_pos_tagger to /ho
+[nltk_data]    |     me/4a15499e-7d0d-4437-8b08-
+[nltk_data]    |     af41bc1d7635/nltk_data...
+[nltk_data]    |   Package maxent_treebank_pos_tagger is already up-
+[nltk_data]    |       to-date!
+[nltk_data]    | Downloading package moses_sample to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package moses_sample is already up-to-date!
+[nltk_data]    | Downloading package movie_reviews to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package movie_reviews is already up-to-date!
+[nltk_data]    | Downloading package mte_teip5 to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package mte_teip5 is already up-to-date!
+[nltk_data]    | Downloading package mwa_ppdb to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package mwa_ppdb is already up-to-date!
+[nltk_data]    | Downloading package names to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package names is already up-to-date!
+[nltk_data]    | Downloading package nombank.1.0 to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package nombank.1.0 is already up-to-date!
+[nltk_data]    | Downloading package nonbreaking_prefixes to /home/4a1
+[nltk_data]    |     5499e-7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package nonbreaking_prefixes is already up-to-date!
+[nltk_data]    | Downloading package nps_chat to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package nps_chat is already up-to-date!
+[nltk_data]    | Downloading package omw to /home/4a15499e-7d0d-4437-
+[nltk_data]    |     8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package omw is already up-to-date!
+[nltk_data]    | Downloading package omw-1.4 to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package omw-1.4 is already up-to-date!
+[nltk_data]    | Downloading package opinion_lexicon to /home/4a15499e
+[nltk_data]    |     -7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package opinion_lexicon is already up-to-date!
+[nltk_data]    | Downloading package panlex_swadesh to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package panlex_swadesh is already up-to-date!
+[nltk_data]    | Downloading package paradigms to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package paradigms is already up-to-date!
+[nltk_data]    | Downloading package pe08 to /home/4a15499e-7d0d-4437-
+[nltk_data]    |     8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package pe08 is already up-to-date!
+[nltk_data]    | Downloading package perluniprops to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package perluniprops is already up-to-date!
+[nltk_data]    | Downloading package pil to /home/4a15499e-7d0d-4437-
+[nltk_data]    |     8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package pil is already up-to-date!
+[nltk_data]    | Downloading package pl196x to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package pl196x is already up-to-date!
+[nltk_data]    | Downloading package porter_test to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package porter_test is already up-to-date!
+[nltk_data]    | Downloading package ppattach to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package ppattach is already up-to-date!
+[nltk_data]    | Downloading package problem_reports to /home/4a15499e
+[nltk_data]    |     -7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package problem_reports is already up-to-date!
+[nltk_data]    | Downloading package product_reviews_1 to /home/4a1549
+[nltk_data]    |     9e-7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package product_reviews_1 is already up-to-date!
+[nltk_data]    | Downloading package product_reviews_2 to /home/4a1549
+[nltk_data]    |     9e-7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package product_reviews_2 is already up-to-date!
+[nltk_data]    | Downloading package propbank to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package propbank is already up-to-date!
+[nltk_data]    | Downloading package pros_cons to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package pros_cons is already up-to-date!
+[nltk_data]    | Downloading package ptb to /home/4a15499e-7d0d-4437-
+[nltk_data]    |     8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package ptb is already up-to-date!
+[nltk_data]    | Downloading package punkt to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package punkt is already up-to-date!
+[nltk_data]    | Downloading package qc to /home/4a15499e-7d0d-4437-
+[nltk_data]    |     8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package qc is already up-to-date!
+[nltk_data]    | Downloading package reuters to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package reuters is already up-to-date!
+[nltk_data]    | Downloading package rslp to /home/4a15499e-7d0d-4437-
+[nltk_data]    |     8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package rslp is already up-to-date!
+[nltk_data]    | Downloading package rte to /home/4a15499e-7d0d-4437-
+[nltk_data]    |     8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package rte is already up-to-date!
+[nltk_data]    | Downloading package sample_grammars to /home/4a15499e
+[nltk_data]    |     -7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package sample_grammars is already up-to-date!
+[nltk_data]    | Downloading package semcor to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package semcor is already up-to-date!
+[nltk_data]    | Downloading package senseval to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package senseval is already up-to-date!
+[nltk_data]    | Downloading package sentence_polarity to /home/4a1549
+[nltk_data]    |     9e-7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package sentence_polarity is already up-to-date!
+[nltk_data]    | Downloading package sentiwordnet to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package sentiwordnet is already up-to-date!
+[nltk_data]    | Downloading package shakespeare to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package shakespeare is already up-to-date!
+[nltk_data]    | Downloading package sinica_treebank to /home/4a15499e
+[nltk_data]    |     -7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package sinica_treebank is already up-to-date!
+[nltk_data]    | Downloading package smultron to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package smultron is already up-to-date!
+[nltk_data]    | Downloading package snowball_data to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package snowball_data is already up-to-date!
+[nltk_data]    | Downloading package spanish_grammars to /home/4a15499
+[nltk_data]    |     e-7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package spanish_grammars is already up-to-date!
+[nltk_data]    | Downloading package state_union to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package state_union is already up-to-date!
+[nltk_data]    | Downloading package stopwords to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package stopwords is already up-to-date!
+[nltk_data]    | Downloading package subjectivity to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package subjectivity is already up-to-date!
+[nltk_data]    | Downloading package swadesh to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package swadesh is already up-to-date!
+[nltk_data]    | Downloading package switchboard to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package switchboard is already up-to-date!
+[nltk_data]    | Downloading package tagsets to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package tagsets is already up-to-date!
+[nltk_data]    | Downloading package timit to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package timit is already up-to-date!
+[nltk_data]    | Downloading package toolbox to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package toolbox is already up-to-date!
+[nltk_data]    | Downloading package treebank to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package treebank is already up-to-date!
+[nltk_data]    | Downloading package twitter_samples to /home/4a15499e
+[nltk_data]    |     -7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package twitter_samples is already up-to-date!
+[nltk_data]    | Downloading package udhr to /home/4a15499e-7d0d-4437-
+[nltk_data]    |     8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package udhr is already up-to-date!
+[nltk_data]    | Downloading package udhr2 to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package udhr2 is already up-to-date!
+[nltk_data]    | Downloading package unicode_samples to /home/4a15499e
+[nltk_data]    |     -7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package unicode_samples is already up-to-date!
+[nltk_data]    | Downloading package universal_tagset to /home/4a15499
+[nltk_data]    |     e-7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package universal_tagset is already up-to-date!
+[nltk_data]    | Downloading package universal_treebanks_v20 to /home/
+[nltk_data]    |     4a15499e-7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package universal_treebanks_v20 is already up-to-
+[nltk_data]    |       date!
+[nltk_data]    | Downloading package vader_lexicon to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package vader_lexicon is already up-to-date!
+[nltk_data]    | Downloading package verbnet to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package verbnet is already up-to-date!
+[nltk_data]    | Downloading package verbnet3 to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package verbnet3 is already up-to-date!
+[nltk_data]    | Downloading package webtext to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package webtext is already up-to-date!
+[nltk_data]    | Downloading package wmt15_eval to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package wmt15_eval is already up-to-date!
+[nltk_data]    | Downloading package word2vec_sample to /home/4a15499e
+[nltk_data]    |     -7d0d-4437-8b08-af41bc1d7635/nltk_data...
+In 2022, the tech industry saw remarkable growth. Companies like Apple, with a market cap exceeding $2.1 trillion,
+unveiled new products, while startups secured billions in funding. The pandemic accelerated digital transformation, boosting
+e-commerce sales by 27%. AI and IoT continued to shape our lives. Amid this, cyberattacks surged by 64%, highlighting the need
+for robust cybersecurity. As we move forward, the fusion of technology and daily life is evident, promising both innovation and
+challenges for the years ahead.
+<class 'str'>
+
+
+97
+
+
+['In 2022, the tech industry saw remarkable growth.', 'Companies like Apple, with a market cap exceeding $2.1 trillion,\nunveiled new products, while startups secured billions in funding.', 'The pandemic accelerated digital transformation, boosting\ne-commerce sales by 27%.', 'AI and IoT continued to shape our lives.', 'Amid this, cyberattacks surged by 64%, highlighting the need\nfor robust cybersecurity.', 'As we move forward, the fusion of technology and daily life is evident, promising both innovation and\nchallenges for the years ahead.']
+
+
+['In 2022, the tech industry saw remarkable growth. Companies like Apple, with a market cap exceeding $2.1 trillion,\nunveiled new products, while startups secured billions in funding. The pandemic accelerated digital transformation, boosting\ne-commerce sales by 27%. AI and IoT continued to shape our lives. Amid this, cyberattacks surged by 64%, highlighting the need\nfor robust cybersecurity. As we move forward, the fusion of technology and daily life is evident, promising both innovation and\nchallenges for the years ahead.']
+
+
+['In', '2022,', 'the', 'tech', 'industry', 'saw', 'remarkable', 'growth.', 'Companies', 'like', 'Apple,', 'with', 'a', 'market', 'cap', 'exceeding', '$2.1', 'trillion,', 'unveiled', 'new', 'products,', 'while', 'startups', 'secured', 'billions', 'in', 'funding.', 'The', 'pandemic', 'accelerated', 'digital', 'transformation,', 'boosting', 'e-commerce', 'sales', 'by', '27%.', 'AI', 'and', 'IoT', 'continued', 'to', 'shape', 'our', 'lives.', 'Amid', 'this,', 'cyberattacks', 'surged', 'by', '64%,', 'highlighting', 'the', 'need', 'for', 'robust', 'cybersecurity.', 'As', 'we', 'move', 'forward,', 'the', 'fusion', 'of', 'technology', 'and', 'daily', 'life', 'is', 'evident,', 'promising', 'both', 'innovation', 'and', 'challenges', 'for', 'the', 'years', 'ahead.']
+['In', '2022', ',', 'the', 'tech', 'industry', 'saw', 'remarkable', 'growth', '.', 'Companies', 'like', 'Apple', ',', 'with', 'a', 'market', 'cap', 'exceeding', '$', '2', '.', '1', 'trillion', ',', 'unveiled', 'new', 'products', ',', 'while', 'startups', 'secured', 'billions', 'in', 'funding', '.', 'The', 'pandemic', 'accelerated', 'digital', 'transformation', ',', 'boosting', 'e', '-', 'commerce', 'sales', 'by', '27', '%.', 'AI', 'and', 'IoT', 'continued', 'to', 'shape', 'our', 'lives', '.', 'Amid', 'this', ',', 'cyberattacks', 'surged', 'by', '64', '%,', 'highlighting', 'the', 'need', 'for', 'robust', 'cybersecurity', '.', 'As', 'we', 'move', 'forward', ',', 'the', 'fusion', 'of', 'technology', 'and', 'daily', 'life', 'is', 'evident', ',', 'promising', 'both', 'innovation', 'and', 'challenges', 'for', 'the', 'years', 'ahead', '.']
+['The', 'best', 'and', 'most', 'beautiful', 'things', 'in', 'the', 'world', 'can', 'not', 'be', 'seen', 'or', 'even', 'touched', ',', 'theymust', 'be', 'felt', 'with', 'the', 'heart', '.']
+[('The', 'best'), ('best', 'and'), ('and', 'most'), ('most', 'beautiful'), ('beautiful', 'things'), ('things', 'in'), ('in', 'the'), ('the', 'world'), ('world', 'can'), ('can', 'not'), ('not', 'be'), ('be', 'seen'), ('seen', 'or'), ('or', 'even'), ('even', 'touched'), ('touched', ','), (',', 'theymust'), ('theymust', 'be'), ('be', 'felt'), ('felt', 'with'), ('with', 'the'), ('the', 'heart'), ('heart', '.')]
+[('The', 'best', 'and'), ('best', 'and', 'most'), ('and', 'most', 'beautiful'), ('most', 'beautiful', 'things'), ('beautiful', 'things', 'in'), ('things', 'in', 'the'), ('in', 'the', 'world'), ('the', 'world', 'can'), ('world', 'can', 'not'), ('can', 'not', 'be'), ('not', 'be', 'seen'), ('be', 'seen', 'or'), ('seen', 'or', 'even'), ('or', 'even', 'touched'), ('even', 'touched', ','), ('touched', ',', 'theymust'), (',', 'theymust', 'be'), ('theymust', 'be', 'felt'), ('be', 'felt', 'with'), ('felt', 'with', 'the'), ('with', 'the', 'heart'), ('the', 'heart', '.')]
+[('The', 'best', 'and', 'most', 'beautiful'), ('best', 'and', 'most', 'beautiful', 'things'), ('and', 'most', 'beautiful', 'things', 'in'), ('most', 'beautiful', 'things', 'in', 'the'), ('beautiful', 'things', 'in', 'the', 'world'), ('things', 'in', 'the', 'world', 'can'), ('in', 'the', 'world', 'can', 'not'), ('the', 'world', 'can', 'not', 'be'), ('world', 'can', 'not', 'be', 'seen'), ('can', 'not', 'be', 'seen', 'or'), ('not', 'be', 'seen', 'or', 'even'), ('be', 'seen', 'or', 'even', 'touched'), ('seen', 'or', 'even', 'touched', ','), ('or', 'even', 'touched', ',', 'theymust'), ('even', 'touched', ',', 'theymust', 'be'), ('touched', ',', 'theymust', 'be', 'felt'), (',', 'theymust', 'be', 'felt', 'with'), ('theymust', 'be', 'felt', 'with', 'the'), ('be', 'felt', 'with', 'the', 'heart'), ('felt', 'with', 'the', 'heart', '.')]
+affect
+giving : give
+given : given
+thanking : thank
+maximum : maximum
+loving : love
+lov
+giving : giv
+given : giv
+thanking : thank
+maximum : maxim
+loving : lov
+
+
+love
+giving : give
+given : given
+thanking : thank
+maximum : maximum
+loving : love
+
+
+loving
+giving : giving
+given : given
+thanking : thanking
+maximum : maximum
+loving : loving
+
+
+179
+232
+841
+[nltk_data]    |   Package word2vec_sample is already up-to-date!
+[nltk_data]    | Downloading package wordnet to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package wordnet is already up-to-date!
+[nltk_data]    | Downloading package wordnet2021 to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package wordnet2021 is already up-to-date!
+[nltk_data]    | Downloading package wordnet2022 to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package wordnet2022 is already up-to-date!
+[nltk_data]    | Downloading package wordnet31 to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package wordnet31 is already up-to-date!
+[nltk_data]    | Downloading package wordnet_ic to /home/4a15499e-
+[nltk_data]    |     7d0d-4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package wordnet_ic is already up-to-date!
+[nltk_data]    | Downloading package words to /home/4a15499e-7d0d-
+[nltk_data]    |     4437-8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package words is already up-to-date!
+[nltk_data]    | Downloading package ycoe to /home/4a15499e-7d0d-4437-
+[nltk_data]    |     8b08-af41bc1d7635/nltk_data...
+[nltk_data]    |   Package ycoe is already up-to-date!
+[nltk_data]    | 
+[nltk_data]  Done downloading collection all
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/4a15499e-7d0d-4437-8b08-
+[nltk_data]     af41bc1d7635/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+​
