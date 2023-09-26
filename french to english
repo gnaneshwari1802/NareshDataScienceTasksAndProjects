@@ -1,5 +1,7 @@
 # !pip install googletrans
 from googletrans import Translator
+# !pip install --upgrade google-cloud-translate
+
 # !pip install googletrans google-cloud-translate
 from google.cloud import translate_v2 as translate
 # Create a Translator Object
