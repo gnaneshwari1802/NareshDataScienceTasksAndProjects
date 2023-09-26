@@ -1,0 +1,64 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[8]:
+
+
+pip install wordcloud
+
+
+# In[9]:
+
+
+import wordcloud
+import matplotlib.pyplot as plt
+
+
+# In[10]:
+
+
+text='Python Python Python Matplotlib Matplotlib Seaborn Network Plot Violin Chart Pandas Datascience Wordcloud Spider Radar Parrallel Alpha Color Brewer Density Scatter Barplot Barplot Boxplot Violinplot Treemap Stacked Area Chart Chart Visualization Dataviz Donut Pie Time-Series Wordcloud Wordcloud Sankey Bubble'
+
+
+# In[11]:
+
+
+print(text)
+
+
+# In[12]:
+
+
+wordcloud_obj = wordcloud.WordCloud()
+
+
+# In[13]:
+
+
+wordcloud_img = wordcloud_obj.generate(text)
+
+
+# In[14]:
+
+
+# Display the word cloud using Matplotlib
+plt.figure(figsize=(8, 8))
+plt.imshow(wordcloud_img, interpolation='bilinear')
+plt.axis("off")
+plt.show()
+
+
+# In[15]:
+
+
+print(text)
+
+
+# In[17]:
+
+
+
+
+
+# In[ ]:
+
