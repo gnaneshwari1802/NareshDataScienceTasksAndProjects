@@ -1,9 +1,18 @@
 
+
 #pip install spacy
 #python -m spacy download en_core_web_sm #(we have 3 type of model is available called small, medium & large)
 import spacy
+# What is spaCy used for?
+# Natural Language Processing With spaCy in Python – Real Python
+# spaCy is a free, open-source library for NLP in Python written in Cython. spaCy is designed to make it easy to build systems for information extraction or general-purpose natural language processing.
 nlp = spacy.load("en_core_web_sm")
+# What is the load function in spaCy?
+# load function. Load a pipeline using the name of an installed package, a string path or a Path -like object. spaCy will try resolving the load argument in this order. If a pipeline is loaded from a string name, spaCy will assume it's a Python package and import it and call the package's own load() method.
 doc = nlp("data science and ai has greate career ahead")
+# What does NLP () do in spaCy?
+# Natural Language Processing With spaCy in Python – Real Python
+# NLP helps you extract insights from unstructured text and has many use cases, such as: Automatic summarization. Named-entity recognition. Question answering systems.
 doc
 # data science and ai has greate career ahead
 for token in doc:
@@ -47,6 +56,9 @@ for token in doc:
 # ADV
 for token in doc:
     print(token.text, token.pos_)
+# What is POS in spaCy?
+# POS Tagging in NLP using Spacy - AskPython
+# Parts of Speech (POS) are the words that perform different roles in a sentence. The English language has 8 parts of speech.    
 # data NOUN
 # science NOUN
 # and CCONJ
@@ -63,6 +75,8 @@ text
 # 'There are broadly two types of extractive summarization tasks depending on what the summarization program focuses on. The first is generic summarization, which focuses on obtaining a generic summary or abstract of the collection (whether documents, or sets of images, or videos, news stories etc.). The second is query relevant summarization, sometimes called query-based summarization, which summarizes objects specific to a query. Summarization systems are able to create both query relevant text summaries and generic machine-generated summaries depending on what the user needs.\nAn example of a summarization problem is document summarization, which attempts to automatically produce an abstract from a given document. Sometimes one might be interested in generating a summary from a single source document, while others can use multiple source documents (for example, a cluster of articles on the same topic). This problem is called multi-document summarization. A related application is summarizing news articles. Imagine a system, which automatically pulls together news articles on a given topic (from the web), and concisely represents the latest news as a summary.\nImage collection summarization is another application example of automatic summarization. It consists in selecting a representative set of images from a larger set of images.[4] A summary in this context is useful to show the most representative images of results in an image collection exploration system. Video summarization is a related domain, where the system automatically creates a trailer of a long video. This also has applications in consumer or personal videos, where one might want to skip the boring or repetitive actions. Similarly, in surveillance videos, one would want to extract important and suspicious activity, while ignoring all the boring and redundant frames captured '
 import spacy
 from spacy.lang.en.stop_words import STOP_WORDS
+# What are the Stopwords in spaCy?
+# Stop words include words like is , the , a , and , in , to , and so on. They are often considered noise in text analysis tasks because they do not carry significant information about the content or the context of the text.
 from string import punctuation
 stopwords = list(STOP_WORDS) 
 stopwords
