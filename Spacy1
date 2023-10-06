@@ -252,3 +252,58 @@ print(summary) # we get the final summary by our model
 #-- PDF to text ( nlp techniqeu)
 # image (ocr)
  
+output:
+data
+science
+and
+ai
+has
+greate
+career
+ahead
+Apple Apple PROPN NNP nsubj Xxxxx True False
+is be AUX VBZ aux xx True True
+looking look VERB VBG ROOT xxxx True False
+at at ADP IN prep xx True True
+buying buy VERB VBG pcomp xxxx True False
+U.K. U.K. PROPN NNP dobj X.X. False False
+startup startup NOUN NN dep xxxx True False
+for for ADP IN prep xxx True True
+$ $ SYM $ quantmod $ False False
+1 1 NUM CD compound d False False
+billion billion NUM CD pobj xxxx True False
+PROPN
+AUX
+VERB
+ADP
+VERB
+PROPN
+NOUN
+ADP
+SYM
+NUM
+NUM
+Apple PROPN
+is AUX
+looking VERB
+at ADP
+buying VERB
+U.K. PROPN
+startup NOUN
+for ADP
+$ SYM
+1 NUM
+billion NUM
+Apple PROPN Apple
+is AUX be
+looking VERB look
+at ADP at
+buying VERB buy
+U.K. PROPN U.K.
+startup NOUN startup
+for ADP for
+$ SYM $
+1 NUM 1
+billion NUM billion
+['There', 'are', 'broadly', 'two', 'types', 'of', 'extractive', 'summarization', 'tasks', 'depending', 'on', 'what', 'the', 'summarization', 'program', 'focuses', 'on', '.', 'The', 'first', 'is', 'generic', 'summarization', ',', 'which', 'focuses', 'on', 'obtaining', 'a', 'generic', 'summary', 'or', 'abstract', 'of', 'the', 'collection', '(', 'whether', 'documents', ',', 'or', 'sets', 'of', 'images', ',', 'or', 'videos', ',', 'news', 'stories', 'etc', '.', ')', '.', 'The', 'second', 'is', 'query', 'relevant', 'summarization', ',', 'sometimes', 'called', 'query', '-', 'based', 'summarization', ',', 'which', 'summarizes', 'objects', 'specific', 'to', 'a', 'query', '.', 'Summarization', 'systems', 'are', 'able', 'to', 'create', 'both', 'query', 'relevant', 'text', 'summaries', 'and', 'generic', 'machine', '-', 'generated', 'summaries', 'depending', 'on', 'what', 'the', 'user', 'needs', '.', '\n', '#', 'collection', 'summarization', 'is', 'another', 'application', 'example', 'of', 'automatic', 'summarization', '.', 'It', 'consists', 'in', 'selecting', 'a', 'representative', 'set', 'of', 'images', 'from', 'a', 'larger', 'set', 'of', 'images.[4', ']', 'A', 'summary', 'in', 'this', 'context', 'is', 'useful', 'to', 'show', 'the', 'most', 'representative', 'images', 'of', 'results', 'in', 'an', 'image', 'collection', 'exploration', 'system', '.', 'Video', 'summarization', 'is', 'a', 'related', 'domain', ',', 'where', 'the', 'system', 'automatically', 'creates', 'a', 'trailer', 'of', 'a', 'long', 'video', '.', 'This', 'also', 'has', 'applications', 'in', 'consumer', 'or', 'personal', 'videos', ',', 'where', 'one', 'might', 'want', 'to', 'skip', 'the', 'boring', 'or', 'repetitive', 'actions', '.', 'Similarly', ',', 'in', 'surveillance', 'videos', ',', 'one', 'would', 'want', 'to', 'extract', 'important', 'and', 'suspicious', 'activity', ',', 'while', 'ignoring', 'all', 'the', 'boring', 'and', 'redundant', 'frames', 'captured']
+[The second is query relevant summarization, sometimes called query-based summarization, which summarizes objects specific to a query.]
