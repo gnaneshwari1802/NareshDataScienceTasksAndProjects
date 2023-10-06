@@ -1,3 +1,5 @@
+!pip install googletrans==4.0.0-rc1
+
 from googletrans import Translator
 # Create a Translator object
 translator = Translator()
@@ -10,3 +12,5 @@ translated_text = translator.translate(french_text, src='fr', dest='en')
 
 # Print the translated text
 print(translated_text.text)
+output:
+Is part of a series on artificial intelligence major objectives Philosophy History History Glossary History VTE Artificial Intelligence (AI) is the intelligence of machines or software, as opposed to the intelligence of humans or animals.It is also the field of computer studies that develops and studies smart machines."AI" can also refer to the machines themselves.AI technology is widely used in industry, government and science.Some leading applications are: advanced web search engines (for example, Google research), recommendation systems (used by YouTube, Amazon and Netflix), understanding human speech (as Siri and Alexa),Autonomous cars (for example, waymo), generative or creative tools (Chatgpt and AI Art) and competition at the highest level in strategic games (such as failures and Go). [1]Artificial intelligence was founded as an academic discipline in 1956. [2]The field has gone through several cycles of optimism [3] [4] Followed by disappointment and loss of financing [5] [6] But after 2012, when deep learning surpassed all the techniques of previous AI, [7] There has been a sharp increase in the number of users.financing and interest.The different sub-domains of AI research are centered on special objectives and on the use of specific tools.The traditional objectives of research in AI understand reasoning, representation of knowledge, planning, learning, treatment of natural language, perception and management of robotics. [A] General intelligence (theAbility to solve an arbitrary problem) is one of the long -term objectives of the field.[8] To solve these problems, IA researchers have adapted and integrated a wide range of problem -solving techniques, including mathematical research and optimization, formal logic, artificial neural networks and methods based onstatistics, probabilities and economics. [B] AI also draws.On psychology, linguistics, philosophy, neuroscience and many other areas. [9]
