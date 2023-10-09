@@ -3,8 +3,8 @@ import nltk
 # !pip install wordcloud
 # !pip install nltk wordcloud
 # !conda install -c conda-forge wordcloud
-
-
+"""A corpus is a collection of papers written in the same language. It will be a collection of text files stored in a directory, frequently surrounded by other text file directories. In the nltk. data.
+"""
 #nltk.download() 
 #import nltk.corpus
 # we will see what is mean by corpora and what all are availabel in nltk python library
@@ -12,6 +12,9 @@ import nltk
 
 #you get a lot of file , some of have some textual document, different function associated with that function , stopwords, differenent type of function 
 #for our example i will lets take consideration as brown & we will understand what exactly nlp can do 
+What is corpus in NLTK?
+"""A corpus can be defined as a collection of text documents. It can be thought as just a bunch of text files in a directory, often alongside many other directories of text files. How it is done ? NLTK already defines a list of data paths or directories in nltk.
+"""
 #from nltk.corpus import brown
 #brown.words() 
 #nltk.corpus.brown.fileids()
