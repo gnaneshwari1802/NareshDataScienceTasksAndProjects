@@ -467,9 +467,16 @@ NE_tokens
 
 NE_tags = nltk.pos_tag(NE_tokens)
 NE_tags
-
+"""
+What is POS tags in NLTK?
+Visualizing Part-of-Speech Tags with NLTK and SpaCy | by ...
+POS tagging is a technique used in Natural Language Processing. It categorizes the tokens in a text as nouns, verbs, adjectives, and so on. In Python, you can use the NLTK library for this purpose. import nltk. from nltk import word_tokenizetext = "This is one simple example."tokens = word_tokenize(text)
+"""
 #we are passin the NE_NER into ne_chunks function and lets see the outputs
-
+"""
+What does Ne_chunk do?
+The ne_chunk() function from the nltk. chunk module is a method of performing named entity recognition in Python using the Natural Language Toolkit (NLTK) library. The ne_chunk() function takes a list of POS-tagged tokens as input and returns a tree of named entities.
+"""
 NE_NER = ne_chunk(NE_tags)
 print(NE_NER)
 
@@ -486,8 +493,17 @@ text=("Python Python Python Matplotlib Matplotlib Seaborn Network Plot Violin Ch
 text
 # Create the wordcloud object
 wordcloud = WordCloud(width=480, height=480, margin=0).generate(text) 
+"""
+What is Wordcloud Python used for?
+Word Cloud is a data visualization technique used for representing text data in which the size of each word indicates its frequency or importance. Significant textual data points can be highlighted using a word cloud.
+"""
 # Display the generated image:
 plt.imshow(wordcloud, interpolation='bilinear')
+"""
+What does plt imshow do in Python?
+matplotlib.pyplot.imshow() in Python - GeeksforGeeks
+The imshow() function in pyplot module of matplotlib library is used to display data as an image; i.e. on a 2D regular raster.
+"""
 plt.axis("off")
 plt.margins(x=0, y=0)
 plt.show()
