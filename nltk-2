@@ -5,6 +5,9 @@ import nltk
 # !conda install -c conda-forge wordcloud
 """A corpus is a collection of papers written in the same language. It will be a collection of text files stored in a directory, frequently surrounded by other text file directories. In the nltk. data.
 """
+"""
+A corpus is a collection of papers written in the same language. It will be a collection of text files stored in a directory, frequently surrounded by other text file directories. In the nltk. data.
+"""
 #nltk.download() 
 #import nltk.corpus
 # we will see what is mean by corpora and what all are availabel in nltk python library
@@ -195,6 +198,136 @@ for words in words_to_stem:
 #stem the same thing using lencastemmer
 
 from nltk.stem import LancasterStemmer
+"""
+What is LancasterStemmer?
+Lancaster Stemming Algorithm
+
+Like the Porter stemmer, the Lancaster stemmer consists of a set of rules where each rule specifies either deletion or replacement of an ending. Also, some rules are restricted to intact words, and some rules are applied iteratively as the word goes through them.
+"""
+"""
+What is the use of stemming?
+Stemming & Lemmatization
+Stemming is a technique used to extract the base form of the words by removing affixes from them. It is just like cutting down the branches of a tree to its stems. For example, the stem of the words eating, eats, eaten is eat. Search engines use stemming for indexing the words.
+"""
+"""
+What is stemming and lemmatization?
+Stemming is a process that stems or removes last few characters from a word, often leading to incorrect meanings and spelling. Lemmatization considers the context and converts the word to its meaningful base form, which is called Lemma.
+"""
+"""
+Porter algorithm is the least aggressive algorithm which is why is widely used and is the oldest stemming algorithm. The stems of the words are somewhat intuitive and are understandable. On the other hand, Lancaster algorithm is very aggressive because of its strictly chopping words and making it much confusing. With this algorithm in use, the stems become non-relatable to some extent and for this very reason, it is least used.
+This is how Porter Stemmer works
+image
+
+This is how Lancaster Stemmer works.
+"""
+
+"""
+In this tutorial, we’ll explain one methodology in natural language processing (NLP) that we can use as a text preprocessing step in our projects. Specifically, it’s about stemming and the difference between Porter and Lancaster stemming algorithms.
+
+In most tutorials, stemming is presented as a process of reducing words into base form but rarely or never are mentioned different types of stemming methods.
+"""
+"""
+Natural Languages Processing (NLP)
+Natural language processing (NLP) is a field of computer science and artificial intelligence that deals with the relationships between computers and human (natural) languages. In particular, the goal of NLP is how to program computers to process and analyze large amounts of natural language data in the same way that a human does. It has grown in importance in recent years due to the availability of digital text data and new statistical techniques for language processing.
+
+There are many examples of NLP projects, but some of the most popular are related to:
+
+Sentiment analysis
+Speech recognition
+Machine translation
+Text summarization
+Chatbots
+Named entity recognition
+Search engines and others
+As a result, these are very diverse tasks that require different text preprocessing techniques.
+
+"""
+"""
+How to Preprocess Text in NLP?
+For a computer to understand text, we would need to convert it into numbers and then apply some mathematical operations. But before that, there are some preprocessing steps that are common to many NLP projects:
+
+Text cleaning – excluding from the text all symbols different than alphabet letters, numbers and punctuation marks, removing double white spaces, converting text into lowercase and similar.
+Stop words removal – filter out some frequent words that don’t give any useful information.
+Lemmatization – grouping together different forms of the same word into its base form. For instance, converting the words “studying”, “studies” and “studied” into “study”.
+Stemming – the process of reducing a word to its base or root form, also known as word stem.
+"""
+"""
+What Is Stemming?
+In brief, stemming is the process of reducing a word to its word stem. Word stem is a base or root form of the word and doesn’t need to be an existing word. For example, the Porter algorithm reduces the words “argue”, “argued”, “argues” and “arguing” to the stem “argu” which isn’t an existing word.
+
+With stemming, we’re able to extract meaningful information from vast sources, like big data, and afterward help search engines to query information. It’s possible to get more results if we recognize and search more word forms. Also, when a word form is recognized, it may be possible to return search results that would otherwise be missed. Because of that, stemming is essential to search queries since, with stemming, we’re able to retrieve additional information.
+"""
+"""
+ How Does Stemming Work?
+There are many ways how stemming algorithms work. Some simple methods will only recognize prefixes and suffixes and strip them. Because of this simplicity, they are prone to errors. In many cases, they will strip wrong prefixes and suffixes. Also, it might be difficult to handle some word forms like irregular verbs, for example, words such as “saw” and “see”.
+
+More complex stemming algorithms use lookup tables of different word forms in combination with well-known suffixes and prefixes. Some of them firstly determine the part of speech of a word and after apply different normalization rules for each part of speech.
+"""
+"""
+Porter Stemming Algorithm
+Porter stemmer is a suffix stripping algorithm. In short, it uses predefined rules to strip words into their base forms.
+
+Every word can be represented as a sequence of consonants and vowels. Let’s denote a consonant with “c”, and a sequence of consonants of length greater than 0 with “C”. Similarly, “v” is a vowel and “V” a sequence of vowels of length greater than 0. Then, every word has one of the four forms
+
+CVCV…C
+CVCV…V
+VCVC…C
+VCVC…V
+or as a single form
+
+[C]VCVC...[V]
+
+
+freestar
+where square brackets denote the arbitrary presence of their contents. The above expression also can be written as
+
+[C][VC]^{m}[V]
+
+where m is called the measure of the word. Some world examples with different m are:
+
+m = 0 (tree, by, why)
+m = 1 (oats, trees, ivy)
+m = 2 (private, oaten, banana)
+To remove common suffixes, Porter stemmer applies more than 50 rules, grouped in 5 steps and some substeps. All rules have a form
+
+(condition) S1 -> S2
+
+This means that if a word has the suffix S1 and the part before suffix (stem) satisfies the condition, we replace S1 with S2. Also, some rules don’t have conditions. Below are some rules with word stemming examples:
+
+SSES -> SS (caresses -> caress)
+S ->  (cats -> cat)
+(m > 0) EED -> EE (agreed -> agree, feed -> feed)
+(m > 0) ATOR -> ATE (operator -> operate)
+(m > 1) ER ->  (airliner -> airlin)
+(m > 1 and (*S or *T)) ION ->  (adoption -> adopt)
+
+"""
+"""
+Lancaster Stemming Algorithm
+Lancaster is one of the most aggressive stemmers as it tends to over stem many words. Like the Porter stemmer, the Lancaster stemmer consists of a set of rules where each rule specifies either deletion or replacement of an ending. Also, some rules are restricted to intact words, and some rules are applied iteratively as the word goes through them.
+
+Because of more strict rules, there are two additional conditions to prevent the stemming of various short-rooted words:
+
+
+freestar
+If the word starts with a vowel, then at least two letters must remain after stemming (owing -> ow, but not ear -> e).
+If the word starts with a consonant, then at least three letters must remain after stemming, and at least one of these must be a vowel or “y” (saying -> say, but not string -> str).
+Lancaster stemmer has more than 100 rules, around double that of Porter stemmer. Also, the authors defined rules using different notation than Porter’s stemming rules. Each rule has five components, two of which are optional:
+
+[ending in reverse][optional intact flag “*”][remove total letters][optional append string][continuation symbol, “>” or “.”]
+
+In particular, here are some examples of the rules:
+
+“sei3y>” – if the word ends with “ies”, then replace the last three letters with “y” and then apply the stemmer again to truncated form.
+“mu*2.” – if the word ends with “um” and if the word is intact, then remove the last 2 letters and terminate.
+“nois4j>” – replace the ending “sion” with “j” and apply the stemmer again.
+
+"""
+"""
+Porter is the most popular stemming algorithm, and it’s a default option in most NLP projects.
+Lancaster is one of the most aggressive stemming methods. Approximately, it has two times more stemming rules than the Porter method and tends to over stem a lot of words.
+In most NLP projects, Porter’s stemming algorithm will give more meaningful results, but sometimes Lancaster stemmer might be worth trying.
+"""
 lst = LancasterStemmer()
 for words in words_to_stem:
     print(words + ':' + lst.stem(words))
