@@ -491,6 +491,15 @@ import matplotlib.pyplot as plt
 # Create a list of word
 text=("Python Python Python Matplotlib Matplotlib Seaborn Network Plot Violin Chart Pandas Datascience Wordcloud Spider Radar Parrallel Alpha Color Brewer Density Scatter Barplot Barplot Boxplot Violinplot Treemap Stacked Area Chart Chart Visualization Dataviz Donut Pie Time-Series Wordcloud Wordcloud Sankey Bubble")
 text
+"""
+Python word clouds came out to be a game-changer visualization technique for understanding and determining patterns and evolving trends. Whether to discover the political agendas of aspiring election candidates of a country or to analyze the customer reviews on the recently launched product, one can get a visual representation by plotting the Word Cloud. In the next few lines, we will learn about the word clouds, their applications, and how to create word cloud in Python.
+"""
+"""
+What is Word Cloud in Python?
+A Word Cloud or Tag Cloud is a visualization technique commonly used to display tags or keywords from websites. These single words reflect the webpage’s context and are clustered together in the Word Cloud. Words in the cloud vary in font size and color, indicating their prominence. Larger font size implies higher importance relative to other words. Word Clouds can take various shapes and sizes based on the creator’s vision. However, the number of words is crucial; too many can make it cluttered and hard to read.
+
+Although, there are different ways by which Word Clouds can be created but the most widely used type is by using the Frequency of Words in our corpus. And thus, we will be creating our Word Cloud by using the Frequency type.
+"""
 # Create the wordcloud object
 wordcloud = WordCloud(width=480, height=480, margin=0).generate(text) 
 """
