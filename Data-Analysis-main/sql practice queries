@@ -1,0 +1,86 @@
+
+
+df_filtered = df[df['Name'].str.startswith('J')][['Name', 'Age', 'State']]
+-----------------------------------------------------------------------------------------------------------------------------------------------
+CREATE TRIGGER update_total_amount
+AFTER INSERT ON order_details
+FOR EACH ROW
+BEGIN
+    UPDATE orders
+    SET total_amount = (
+        SELECT SUM(quantity * price)
+        FROM order_details
+        WHERE order_id = NEW.order_id
+    )
+    WHERE order_id = NEW.order_id;
+END;
+-----------------------------------------------------------------------------------------------
+SELECT customer_id, 
+       SUM(order_total) AS total_order_amount,
+       CASE
+           WHEN SUM(order_total) >= 500 THEN 'large'
+           ELSE 'small'
+       END AS order_category
+FROM orders
+GROUP BY customer_id;
+------------------------------------------------------------------------------------------------
+def even_numbers_doubled(input_string):
+    # Split the input string by comma and convert each element to an integer
+    numbers = [int(num) for num in input_string.split(',')]
+
+    # Use list comprehension to filter even numbers and double them
+    even_doubled = [num * 2 for num in numbers if num % 2 == 0]
+
+    return even_doubled
+
+# Get input from the user
+input_string = input("Enter comma separated integers: ")
+
+# Call the function and print the output
+output = even_numbers_doubled(input_string)
+print(output)
+------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
+SELECT c.category_name AS category_name,
+       SUM(s.sale_price) AS total_sales,
+       SUM(s.sale_price - p.cost_price) AS total_profit
+FROM sales AS s
+JOIN products AS p ON p.product_id = s.product_id
+JOIN category AS c ON c.category_id = p.category_id
+GROUP BY c.category_name
+ORDER BY total_profit DESC;
+..........................................................................................................................................................................
+CREATE PROCEDURE get_user_playlist_songs(IN user_id INT)
+BEGIN
+    SELECT p.title AS 'playlist title', s.title AS 'song title'
+    FROM users u
+    INNER JOIN playlists pl ON u.id = pl.user_id
+    INNER JOIN playlist_songs ps ON pl.id = ps.playlist_id
+    INNER JOIN songs s ON ps.song_id = s.id
+    WHERE u.id = user_id
+    ORDER BY pl.title ASC, s.title ASC;
+END;
+...............................................................................................................................................................
+SELECT customer_id, SUM(amount) AS 'total amount', MAX(order_date) AS 'last order date'
+FROM orders
+GROUP BY customer_id
+ORDER BY SUM(amount) DESC, MAX(order_date) ASC;
+.................................................................................................................................................................
+SELECT name,
+    CASE department
+        WHEN 'HR' THEN salary * 1.1
+        WHEN 'TT' THEN salary * 1.15
+        WHEN 'Finance' THEN salary * 1.2
+        ELSE salary
+    END AS 'updated salary'
+FROM employees;
+......................................................................................................................................................
+SELECT employee_id, first_name, salary
+FROM employees
+WHERE last_name LIKE 'S%'
+  AND (department = 'Engineering' OR department = 'Marketing')
+  AND salary >= 50000
+  AND hire_date >= '2022-01-01' AND hire_date < '2023-01-01'
+ORDER BY employee_id ASC;
+.............................................................................................................................................

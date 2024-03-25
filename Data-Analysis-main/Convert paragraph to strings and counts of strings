@@ -1,0 +1,218 @@
+Python pickle module is used for serializing and de-serializing a Python object structure. 
+Any object in Python can be pickled so that it can be saved on disk.
+What pickle does is that it “serializes” the object first before writing it to file. 
+Pickling is a way to convert a python object (list, dict, etc.) into a character stream. 
+The idea is that this character stream contains all the information necessary to reconstruct the object in another python script.
+
+# Python3 program to illustrate store 
+# efficiently using pickle module 
+# Module translates an in-memory Python object 
+# into a serialized byte stream—a string of 
+# bytes that can be written to any file-like object.
+  
+import pickle
+  
+def storeData():
+    # initializing data to be stored in db
+    Omkar = {'key' : 'Omkar', 'name' : 'Omkar Pathak',
+    'age' : 21, 'pay' : 40000}
+    Jagdish = {'key' : 'Jagdish', 'name' : 'Jagdish Pathak',
+    'age' : 50, 'pay' : 50000}
+  
+    # database
+    db = {}
+    db['Omkar'] = Omkar
+    db['Jagdish'] = Jagdish
+      
+    # Its important to use binary mode
+    dbfile = open('examplePickle', 'ab')
+      
+    # source, destination
+    pickle.dump(db, dbfile)                     
+    dbfile.close()
+  
+def loadData():
+    # for reading also binary mode is important
+    dbfile = open('examplePickle', 'rb')     
+    db = pickle.load(dbfile)
+    for keys in db:
+        print(keys, '=>', db[keys])
+    dbfile.close()
+  
+if __name__ == '__main__':
+    storeData()
+    loadData()
+Output:
+
+omkarpathak-Inspiron-3542:~/Documents/Python-Programs$ python P60_PickleModule.py
+Omkar => {'age': 21,  'name': 'Omkar Pathak',  'key': 'Omkar',  'pay': 40000}
+Jagdish => {'age': 50,  'name': 'Jagdish Pathak',  'key': 'Jagdish',  'pay': 50000}
+Pickling without a file
+
+# initializing data to be stored in db
+Omkar = {'key' : 'Omkar', 'name' : 'Omkar Pathak', 
+'age' : 21, 'pay' : 40000}
+Jagdish = {'key' : 'Jagdish', 'name' : 'Jagdish Pathak',
+'age' : 50, 'pay' : 50000}
+  
+# database
+db = {}
+db['Omkar'] = Omkar
+db['Jagdish'] = Jagdish
+  
+# For storing
+b = pickle.dumps(db)       # type(b) gives <class 'bytes'>
+  
+# For loading
+myEntry = pickle.loads(b)
+print(myEntry)
+Advantages of using Pickle Module:
+
+Recursive objects (objects containing references to themselves): Pickle keeps track of the objects it has already serialized, so later references to the same object won’t be serialized again. (The marshal module breaks for this.)
+Object sharing (references to the same object in different places): This is similar to self- referencing objects; pickle stores the object once, and ensures that all other references point to the master copy. Shared objects remain shared, which can be very important for mutable objects.
+User-defined classes and their instances: Marshal does not support these at all, but pickle can save and restore class instances transparently. The class definition must be importable and live in the same module as when the object was stored.
+.....................................................................................................................................................
+A metaclass in Python is a class of a class that defines how a class behaves. A class is itself an instance of a metaclass. 
+A class in Python defines how the instance of the class will behave. In order to understand metaclasses well, one needs to have prior experience working with Python classes. 
+Before we dive deeper into metaclasses, let's get a few concepts out of the way.
+
+Everything in Python is an Object
+
+class TestClass():
+    pass
+
+my_test_class = TestClass()
+print(my_test_class)
+article = 'metaclasses'
+article.__class__
+
+.........................................................................................................................
+def add(*numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+
+
+print(add(2, 3))
+print(add(2, 3, 5))
+print(add(2, 3, 5, 7))
+print(add(2, 3, 5, 7, 9))
+
+You can use *args and **kwargs as arguments of a function when you are unsure about the number of arguments to pass in the functions.
+
+How to Use *args in Python
+*args allows us to pass a variable number of non-keyword arguments to a Python function. In the function, we should use an asterisk (*) before the parameter name to pass a variable number of arguments.
+
+def add(*args):
+    print(args, type(args))
+
+add(2, 3)
+import pandas as pd
+
+# Sample employee data
+data = {
+    'Name': ['John', 'Jane', 'Mark', 'Emily', 'David', 'Lisa'],
+    'Age': [32, 28, 45, 33, 39, 27],
+    'Salary': [5000, 6000, 7000, 5500, 8000, 6500],
+    'Department': ['HR', 'IT', 'IT', 'HR', 'Finance', 'Finance']
+}
+
+# Create a dataframe from the data
+df = pd.DataFrame(data)
+
+# Group the data by Department and calculate the mean of Salary for each group
+grouped_data = df.groupby('Department')['Salary'].mean()
+
+# Sort the resulting dataframe by the mean salary in descending order
+sorted_data = grouped_data.sort_values(ascending=False)
+
+# Create a new column in the resulting dataframe called 'Rank' that assigns a rank to each department
+sorted_data = sorted_data.reset_index()
+sorted_data['Rank'] = sorted_data.index + 1
+
+# Print the resulting dataframe
+print(sorted_data)
+...................................................................................................................................................................
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+import pandas as pd
+Text = ''' 
+A computer is a machine that can be programmed to carry out sequences of arithmetic or logical 
+operations automatically. Modern computers can perform generic sets of operations known as programs. 
+These programs enable computers to perform a wide range of tasks. 
+A computer system is a complete computer that includes the hardware, operating system, and peripheral equipment needed and used for full operation. 
+This term may also refer to a group of computers that are linked and function together, such as a computer network or computer cluster. 
+A broad range of industrial and consumer products use computers as control systems. 
+Simple special-purpose devices like microwave ovens and remote controls are included, 
+as are factory devices like industrial robots and computer-aided design, as well as general-purpose devices like personal computers and mobile devices like smartphones. 
+Computers power the Internet, which links hundreds of millions of other computers and users hardware.
+'''
+
+import pandas as pd
+t=Text.splitlines(keepends=False)
+p=''.join(t).split(".")
+"""d=''.join(t).split("")"""
+print(p)
+s=" "
+for i in p:
+    s+=i
+s1=s.replace(",","").replace("-"," ")    
+print(s1)    
+d=[i for i in s1.split(" ") if i!=""]
+print(d)
+g={}
+for i in d:
+    if i not in g:
+       g[i]=1
+    else:
+        g[i]+=1
+print(g)        
+df=pd.DataFrame([(k,v) for k,v in g.items()],columns=['Words','Count'])
+
+
+
+print(df)
+
+    
+import pandas as pd
+
+# Sample employee data
+data = {
+    'Name': ['John', 'Jane', 'Mark', 'Emily', 'David', 'Lisa'],
+    'Age': [32, 28, 45, 33, 39, 27],
+    'Salary': [5000, 6000, 7000, 5500, 8000, 6500],
+    'Department': ['HR', 'IT', 'IT', 'HR', 'Finance', 'Finance']
+}
+
+# Create a dataframe from the data
+df = pd.DataFrame(data)
+
+# Group the data by Department and calculate the mean of Salary for each group
+grouped_data = df.groupby('Department')['Salary'].mean()
+
+# Sort the resulting dataframe by the mean salary in descending order
+sorted_data = grouped_data.sort_values(ascending=False)
+
+# Create a new column in the resulting dataframe called 'Rank' that assigns a rank to each department
+sorted_data = sorted_data.reset_index()
+sorted_data['Rank'] = sorted_data.index + 1
+
+# Print the resulting dataframe
+print(sorted_data)
+
+import pandas as pd
+df= pd.DataFrame({
+    'ADDRESS':('56th,ben colony,btm layout,banaglore,78909,3rd,april,2022,5hr,55min,8sec',
+                '20th street,jonhs road,whitefield,bangalore,78567,6th,dec,2021,0.280704741')})
+
+#1st method (Split text to multiple columns with dataframe)
+
+
+
+df[["house no","street","city","state","zipcode","day","month","year","hr","mm","ss"]]=df["ADDRESS"].str.split(",",expand=True)
+print(df)
+
+#2nd method (Split text to multiple column by delimiter)
+df["ADDRESS"].str.split(',',expand=True)
+
