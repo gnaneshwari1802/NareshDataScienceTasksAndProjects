@@ -1,0 +1,19 @@
+24>	Create tensorflow environment – 
+25>		conda create -n tensorflow_env tensorflow
+26>	activate tensorflow_env instead of base 
+27>		activate the tensorflow env
+28>	install keras –
+29>		pip install keras==2.3.1
+30>	In tensorflow environment
+31>	pip install numpy,pandas,scipy,seaborn,matplotlib ( all pkg in tensorflow_env)
+32>	Open anaconda navigator home – click on base application to tensorflow_env – jupyter & spyder setting button – update to spyder 4.1.3 & jupyter 6.0.3
+33>	Install pytorch – 
+a.	pip install torch==1.5.1+cpu torchvision==0.6.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+34>	Install openCV –
+a.	pip install opencv-python
+35>	If you want to come to base then type (activate base )
+36>	If you want to come to tensorflow_env (activate tensorflow_env)
+37>	
+38>	
+
+ jupy notebook - 6.4.5 and spyder - 5.1.11 
