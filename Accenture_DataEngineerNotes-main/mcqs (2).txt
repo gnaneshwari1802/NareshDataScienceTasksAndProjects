@@ -1,0 +1,170 @@
+Which maven package contains the Kafka-Spark streaming connector?
+   spark-streaming-kafka-0-8_2.11 (a)
+   spark-core_2.11
+   kafka-streaming
+   kafka-clients
+
+
+
+What is needed to create a Kafka stream using the KafkaUtils.createStream function?
+	Spark streaming context (a)
+	GroupId (a)
+	Zookeeper address (a)
+	Topics (a)
+	Kafka parameters
+	Broker list
+
+
+Which Spark streaming function is used to combine streams that are running in parallel?
+	map()
+	unify()
+	union() (a)
+	combine()
+	reduce()
+
+
+Which stream function should be used to output data to Kafka?
+	foreachRDD() (a)
+	print()
+	output()
+	send()
+	foreach()
+
+Which data structure is used to optimize the Kafka output process in parallel streams?
+	pool (a)
+	map
+	constant
+	list
+
+
+What is needed to create a Kafka stream using the KafkaUtils.createDirectStream function?
+	Spark streaming context (a)
+	GroupId
+	Topic list
+	Zookeeper address
+	ConsumerStrategy (a)
+	LocationStrategy (a)
+
+Which location strategy should be implemented when both Spark executors and Kafka brokers are on the same host?
+	Subscribe
+	Assign
+	PreferBrokers (a)
+	PreferFixed
+	PreferConsitent
+
+
+Which KafkaUtils function is used to create an RDD based on offset ranges?
+	map()
+	foreachRDD()
+	RDD()
+	createRDD() (a)
+	createDirectStream()
+
+
+Which function is used to get current Kafka offsets for an rdd?
+	KafkaUtils.getOffsets(rdd)
+	rdd.getOffsets()
+	((HasOffsetRanges) rdd.rdd()).offsetRanges() (a)
+	((HasOffsetRanges) rdd. offsetRanges())
+
+
+Which Spark stream function should be used to split a string into an array of words?
+	map() (a)
+	foreachRDD()
+	reduce()
+	split()
+
+
+What are the five core APIs of Kafka
+	Producer,consumer,streams,connect,admin
+
+
+Specify the levels of the kafka protocol
+	Application
+	presentation
+	session
+	transport
+	network
+	datalink
+	physical
+
+
+which of the one is SSL-encrypted communication
+	Presentation (a)
+	session
+	transport
+	network
+
+
+Which one of the following describes data in streaming data?
+	bounded and continuous
+	bounded and discrete
+	unbounded and continuous (a)
+	unbounded and discrete
+
+
+Which is the acknowledgment level that provides the best delivery guarantee?
+	total
+	zero
+	all (a)
+	one
+
+
+Given a high load topic with small message sizes and no requirements from the latency perspective, which property would help to increase the throughput the most?
+	max.in.flight.request.per.second
+	batch.size
+	acks
+	linger.ms (a)
+
+
+What kind of mechanism do Kafka Consumers use for retrieving records?
+	command
+	push
+	pull  (a)
+	event-based
+
+
+Given a topic with five partitions, what is the maximum number of consumers from a consumer group that can be active at the same time?
+	infinite
+	one
+	five (a)
+	ten
+
+Given a topic that should contain only filtered data from another topic, which technology would you use to achieve this?
+	kafka broker
+	kafka connect
+	kafka producer
+	kafka streams (A)
+
+Deleting records before certain offsets can be done by which of the following?
+	partition (A)
+	cluster
+	broker
+	topic
+
+Given an external system that your consumer needs to send data to, when is the best time to commit the offsets?
+	Immediately after the request has been sent
+	When the consumer chooses to commit
+	After a response from the external system (a)
+	About one minute after consuming the message
+
+Which tool should a new custom application be integrated with to produce data to Kafka?
+	kafka producer (a)
+	rest proxy
+	kafka connect
+	admin client
+
+
+In which format the kafka broker stores records?
+	Serialize
+	Deserialize
+	Binary (a)
+	Both a and b
+
+
+Which type of clean-up policy would be most appropriate in kafka?
+	Delete
+	Compact
+	A and B
+	None
+
