@@ -1,0 +1,9 @@
+https://www.kaggle.com/code/prashant111/complete-guide-on-time-series-analysis-in-python/notebook
+
+https://www.kaggle.com/code/prashant111/complete-guide-on-time-series-analysis-in-python/notebook
+
+https://www.kaggle.com/code/kaianchan/time-series-forecasting-by-using-lstm
+
+https://www.kaggle.com/code/muhammadshalaby/predict-monthly-milk-production
+
+https://www.kaggle.com/code/amirrezaeian/time-series-data-analysis-using-lstm-tutorial
