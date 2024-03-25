@@ -2,6 +2,7 @@
 25>		conda create -n tensorflow_env tensorflow
 26>	activate tensorflow_env instead of base 
 27>		activate the tensorflow env
+     conda activate tensorflow_env
 28>	install keras –
 29>		pip install keras==2.3.1
 30>	In tensorflow environment
