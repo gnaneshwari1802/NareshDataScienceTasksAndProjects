@@ -1,3 +1,4 @@
+https://www.educative.io/answers/how-to-compute-the-rolling-mean-of-a-time-series-in-python
 Python pickle module is used for serializing and de-serializing a Python object structure. 
 Any object in Python can be pickled so that it can be saved on disk.
 What pickle does is that it “serializes” the object first before writing it to file. 
